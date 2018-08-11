@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*=== start default style */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway");
 * {
@@ -388,6 +389,207 @@ h6 {
     width: 100%;
   }
 }
+nav {
+  width: 65%;
+  flex: 0 0 65%;
+  height: 100%;
+}
+nav .navbar-toggler {
+  width: 60px;
+  margin-right: 1em;
+  border: none;
+}
+nav .navbar-toggler .toggler-icon, nav .navbar-toggler:before, nav .navbar-toggler:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: rgba(26, 26, 29, 0.5);
+  margin: 8px 0;
+  opacity: 1;
+  transform: rotate(0) translate(0);
+  will-change: transform;
+  transition: transform 0.3s linear, opacity 0.3s ease;
+}
+nav .navbar-toggler[aria-expanded=true] .toggler-icon {
+  opacity: 0;
+}
+nav .navbar-toggler[aria-expanded=true]:before {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+nav .navbar-toggler[aria-expanded=true]:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+nav .navbar-items {
+  flex: 1 0 auto;
+}
+nav .nav-item {
+  padding: 0 1em;
+}
+nav .navbar-collapse {
+  background-color: #fff;
+  position: absolute;
+  top: 65px;
+  left: auto;
+  z-index: 999;
+  box-shadow: 0px 0px 10px 2px rgba(26, 26, 29, 0.3);
+  transform: scale(0);
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(1, 2, 0, -0.5);
+}
+nav .navbar-collapse.show {
+  transform: scale(1);
+}
+nav .navbar-collapse .nav-item {
+  padding: 10px 1em;
+}
+
+header {
+  position: relative;
+  min-height: 500px;
+  height: 500px;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+header .top-bar {
+  display: flex;
+  height: 75%;
+  height: 75vh;
+  align-items: flex-start;
+}
+header .search {
+  flex: 1 0 auto;
+  padding: 0.5em 1em;
+  background-color: #c3dbdb;
+  display: flex;
+  height: 100%;
+}
+header .slider {
+  height: 50%;
+  height: 50vh;
+  top: -25%;
+  top: -25vh;
+  position: relative;
+  z-index: 99;
+}
+header .carousel {
+  display: inline-block;
+  width: 75%;
+  height: 100%;
+}
+header .carousel-item {
+  height: 100%;
+}
+header .carousel-item figure {
+  width: 75%;
+  position: relative;
+  height: 100%;
+  display: block;
+}
+header .carousel-item figure img {
+  width: 100%;
+  height: 100%;
+}
+header .carousel-item figcaption {
+  position: absolute;
+  top: 40%;
+  left: -50px;
+}
+header .carousel-item .socal-links {
+  position: relative;
+  flex: 1 0 auto;
+}
+header .carousel-item .socal-links .list-group-item {
+  background: none;
+  font-size: 1em;
+  border: none;
+  padding: 0.5em 1em;
+}
+header .carousel-item .socal-links .item-number {
+  transform: rotate(-90deg) translate(0, -200%);
+  padding: 0.5em 1em;
+}
+header .carousel-item .socal-links .item-number:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: #1a1a1d;
+  display: inline-block;
+  vertical-align: middle;
+}
+header .carousel-item .socal-links .view-profile {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  z-index: 99;
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+}
+header .carousel-item .socal-links .view-profile span {
+  background-color: #b4d3d3;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  color: #fff;
+}
+header .carousel-item .socal-links .view-profile:after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  margin-left: -5px;
+  vertical-align: top;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  padding-top: 15px;
+  font-size: 24px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+header .carousel-dota {
+  width: 24%;
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  position: relative;
+}
+header .carousel-indicators {
+  display: block;
+  margin: 0;
+  padding-left: 2em;
+}
+header .carousel-indicators li {
+  text-indent: 0px;
+  margin: 1em 0;
+  width: auto;
+  height: auto;
+  background: none;
+  cursor: pointer;
+  color: #1a1a1d;
+}
+header .carousel-indicators li.active {
+  background: none;
+}
+header .carousel-indicators li:after, header .carousel-indicators li:before {
+  display: none;
+  position: static;
+}
+header .carousel-indicators li.active:after {
+  display: inline-block;
+  background: none;
+  width: 20%;
+  height: 2px;
+  margin-left: 20px;
+  background-color: #1a1a1d;
+  vertical-align: middle;
+}
+
 /* start media style */
 @media print {
   * {

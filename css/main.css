@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*=== start default style */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway");
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -53,8 +52,8 @@ html, body {
   font-family: "Raleway", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .h-style {
-  font-family: "Open Sans", sans-serif;
+header .carousel-item .socal-links:after, nav .nav-item, h1, h2, h3, h4, h5, h6, .h-style {
+  font-family: "Amaranth", sans-serif;
 }
 
 html, body {
@@ -389,13 +388,16 @@ h6 {
     width: 100%;
   }
 }
+/*======================
+====== start nav =======
+======================*/
 nav {
   width: 65%;
   flex: 0 0 65%;
   height: 100%;
 }
 nav .navbar-toggler {
-  width: 60px;
+  width: 50px;
   margin-right: 1em;
   border: none;
 }
@@ -405,7 +407,7 @@ nav .navbar-toggler .toggler-icon, nav .navbar-toggler:before, nav .navbar-toggl
   height: 2px;
   display: block;
   background-color: rgba(26, 26, 29, 0.5);
-  margin: 8px 0;
+  margin: 4px 0;
   opacity: 1;
   transform: rotate(0) translate(0);
   will-change: transform;
@@ -415,16 +417,19 @@ nav .navbar-toggler[aria-expanded=true] .toggler-icon {
   opacity: 0;
 }
 nav .navbar-toggler[aria-expanded=true]:before {
-  transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(3px, 4px);
 }
 nav .navbar-toggler[aria-expanded=true]:after {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(5px, -6px);
 }
 nav .navbar-items {
   flex: 1 0 auto;
 }
 nav .nav-item {
   padding: 0 1em;
+  letter-spacing: -2px;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 nav .navbar-collapse {
   background-color: #fff;
@@ -444,6 +449,12 @@ nav .navbar-collapse .nav-item {
   padding: 10px 1em;
 }
 
+/*======================
+====== end nav =======
+======================*/
+/*======================
+====== start header =======
+======================*/
 header {
   position: relative;
   min-height: 500px;
@@ -451,6 +462,10 @@ header {
   height: 100vh;
   background-color: #fff;
   overflow: hidden;
+}
+header .navbar-brand {
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 header .top-bar {
   display: flex;
@@ -479,7 +494,17 @@ header .carousel {
   height: 100%;
 }
 header .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  opacity: 0;
   height: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+header .carousel-item.active {
+  opacity: 1;
+  z-index: 99;
 }
 header .carousel-item figure {
   width: 75%;
@@ -493,30 +518,36 @@ header .carousel-item figure img {
 }
 header .carousel-item figcaption {
   position: absolute;
-  top: 40%;
+  top: 25%;
   left: -50px;
+  color: #c3dbdb;
+}
+header .carousel-item figcaption h2 {
+  margin-bottom: 10px;
 }
 header .carousel-item .socal-links {
   position: relative;
   flex: 1 0 auto;
+}
+header .carousel-item .socal-links .line {
+  display: block;
+  width: 2px;
+  height: 33px;
+  background-color: #1a1a1d;
+  margin-left: 1.5em;
+  margin-top: 1em;
+}
+header .carousel-item .socal-links:after {
+  content: attr(data-number);
+  padding: 0.5em 1em;
+  transform: rotate(-90deg);
+  display: inline-block;
 }
 header .carousel-item .socal-links .list-group-item {
   background: none;
   font-size: 1em;
   border: none;
   padding: 0.5em 1em;
-}
-header .carousel-item .socal-links .item-number {
-  transform: rotate(-90deg) translate(0, -200%);
-  padding: 0.5em 1em;
-}
-header .carousel-item .socal-links .item-number:after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background-color: #1a1a1d;
-  display: inline-block;
-  vertical-align: middle;
 }
 header .carousel-item .socal-links .view-profile {
   position: absolute;
@@ -572,6 +603,7 @@ header .carousel-indicators li {
   background: none;
   cursor: pointer;
   color: #1a1a1d;
+  letter-spacing: 5px;
 }
 header .carousel-indicators li.active {
   background: none;
@@ -588,6 +620,39 @@ header .carousel-indicators li.active:after {
   margin-left: 20px;
   background-color: #1a1a1d;
   vertical-align: middle;
+}
+
+/*======================
+====== end header =======
+======================*/
+#search {
+  position: relative;
+}
+#search input {
+  text-indent: 10px;
+  padding: 0.5em;
+  width: 100%;
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+  z-index: 9;
+  transform: scale(0, 1);
+  transform-origin: right;
+  will-change: transform;
+  transition: transform 0.3s ease-in-out;
+}
+#search input.active {
+  transform: scale(1);
+}
+#search label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  z-index: 99;
+  cursor: pointer;
 }
 
 /* start media style */

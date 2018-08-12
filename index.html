@@ -22,6 +22,7 @@
   <!-- Meta Keyword -->
   <meta name="keyword" content="Mitalent">
   <!--Google Fonts API =========== -->
+  <link href="https://fonts.googleapis.com/css?family=Amaranth:700|Raleway" rel="stylesheet">
   <!--css style link-->
   <!--bootstrap v4.0 -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -51,43 +52,56 @@
 					  </button>
 					<!--========= manu list =======-->
 					  <div class="navbar-collapse" id="navbar">
-					    <ul class="navbar-nav mr-auto" role="manu">
+					    <ul class="navbar-nav mr-auto" role="menu">
 					      <li class="nav-item active">
-					        <a class="nav-link" href="#">clients</a>
+					        <a class="nav-link" href="#" role="menuitem">home</a>
 					      </li>
 					      <li class="nav-item">
-					        <a class="nav-link" href="#">news</a>
+					        <a class="nav-link" href="#" role="menuitem">about</a>
 					      </li>
 					      <li class="nav-item">
-					        <a class="nav-link" href="#">news</a>
+					        <a class="nav-link" href="#" role="menuitem">clients</a>
 					      </li>
 					      <li class="nav-item">
-					        <a class="nav-link" href="#">news</a>
+					        <a class="nav-link" href="#" role="menuitem">news</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#" role="menuitem">profile</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#" role="menuitem">Blog</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#" role="menuitem">contact</a>
 					      </li>
 					    </ul>
 					  </div>
 					<!--========= manu item in big screen =======-->
 					  <div class="navbar-items  d-flex">
-					  	<ul class="navbar-nav flex-row">
+					  	<ul class="navbar-nav flex-row" role="menu">
 					  		<li class="nav-item">
-					  			<a href="#" class="nav-link">clients</a>
+					  			<a href="#" class="nav-link" role="menuitem">clients</a>
 					  		</li>
 					  		<li class="nav-item">
-					  			<a href="#" class="nav-link">news</a>
+					  			<a href="#" class="nav-link" role="menuitem">news</a>
 					  		</li>
 					  	</ul>
 					  </div>
-					  <a class="navbar-brand" href="#">
-					  	mitalent
-					  </a>
+					  <h1>
+						  <a class="navbar-brand" href="#">
+						  	mitalent
+						  </a>
+					  </h1>
 				  </div>
 				</nav>
 				<!--========== end nav========-->
 				<!--========== start search========-->
 				<div class="search">
 					<div class="container">
-						<input type="text" name="search" value="" placeholder="search..." id="search" />
-						<label for="search"><i class="fa fa-search" aria-hidden="true"></i></label>
+						<form id="search">
+							<input type="text" name="search" value="" placeholder="search..." id="searchInput" />
+							<label for="searchInput" aria-label="search"><i class="fa fa-search" aria-hidden="true"></i></label>
+						</form>
 					</div>
 				</div>
 				<!--========== end search========-->
@@ -98,8 +112,8 @@
 				<div class="container">
 					<div class="carousel slide" id="slider-header">
 						<!--========== start slider item========-->
-					    <div class="carousel-item d-flex align-items-stretch">
-					    	<div class="socal-links">
+					    <div class="carousel-item d-flex align-items-stretch active">
+					    	<div class="socal-links" data-number="01">
 					    		<ul class="list-group">
 					    			<li class="list-group-item">
 					    				<a href="#!" aria-label="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
@@ -114,9 +128,7 @@
 					    				<a href="#!" aria-label="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 					    			</li>
 					    		</ul>
-					    		<div class="item-number">
-					    			01 
-					    		</div>
+					    		<div class="line"></div>
 					    		<button class="btn view-profile h-style text-uppercase">
 					    			<span>view profile</span>
 					    		</button>
@@ -125,18 +137,112 @@
 					    		<img src="./img/slider-1.jpg" title="img1" alt="img1" />
 					    		<figcaption>
 					    			<h2>derek<br/>anderson</h2>
-					    			<p class="mt-5">british comedian</p>
+					    			<p>british comedian</p>
 					    		</figcaption>
 					    	</figure>
 					    </div>
+						<!--========== end slider item========-->
 						<!--========== start slider item========-->
+					    <div class="carousel-item d-flex align-items-stretch">
+					    	<div class="socal-links" data-number="02">
+					    		<ul class="list-group">
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+					    			</li>
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					    			</li>
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					    			</li>
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+					    			</li>
+					    		</ul>
+					    		<div class="line"></div>
+					    		<button class="btn view-profile h-style text-uppercase">
+					    			<span>view profile</span>
+					    		</button>
+					    	</div>
+					    	<figure>
+					    		<img src="./img/slider-2.jpg" title="img1" alt="img1" />
+					    		<figcaption>
+					    			<h2>derek<br/>smith</h2>
+					    			<p>british comedian</p>
+					    		</figcaption>
+					    	</figure>
+					    </div>
+						<!--========== end slider item========-->
+						<!--========== start slider item========-->
+					    <div class="carousel-item d-flex align-items-stretch">
+					    	<div class="socal-links" data-number="03">
+					    		<ul class="list-group">
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+					    			</li>
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					    			</li>
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					    			</li>
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+					    			</li>
+					    		</ul>
+					    		<div class="line"></div>
+					    		<button class="btn view-profile h-style text-uppercase">
+					    			<span>view profile</span>
+					    		</button>
+					    	</div>
+					    	<figure>
+					    		<img src="./img/slider-3.jpg" title="img1" alt="img1" />
+					    		<figcaption>
+					    			<h2>jon<br/>anderson</h2>
+					    			<p>british comedian</p>
+					    		</figcaption>
+					    	</figure>
+					    </div>
+						<!--========== end slider item========-->
+						<!--========== start slider item========-->
+					    <div class="carousel-item d-flex align-items-stretch">
+					    	<div class="socal-links" data-number="04">
+					    		<ul class="list-group">
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+					    			</li>
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					    			</li>
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					    			</li>
+					    			<li class="list-group-item">
+					    				<a href="#!" aria-label="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+					    			</li>
+					    		</ul>
+					    		<div class="line"></div>
+					    		<button class="btn view-profile h-style text-uppercase">
+					    			<span>view profile</span>
+					    		</button>
+					    	</div>
+					    	<figure>
+					    		<img src="./img/slider-4.jpg" title="img1" alt="img1" />
+					    		<figcaption>
+					    			<h2>jon<br/>will</h2>
+					    			<p>british comedian</p>
+					    		</figcaption>
+					    	</figure>
+					    </div>
+						<!--========== end slider item========-->
 					</div>
 					<!--========== slider button ========-->
 					<div class="carousel-dota">
-						<ol class="carousel-indicators">
+						<ol class="carousel-indicators h-style">
 						   <li data-target="#slider-header" data-slide-to="0" class="active">01</li>
 						   <li data-target="#slider-header" data-slide-to="1">02</li>
 						   <li data-target="#slider-header" data-slide-to="2">03</li>
+						   <li data-target="#slider-header" data-slide-to="3">04</li>
 						</ol>
 					</div>
 				</div>

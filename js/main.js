@@ -1,5 +1,8 @@
 $(function (){
 	var navbarToggler = $('.navbar-toggler');
+	var carouselIndicators = $('.carousel-indicators');
+	var search = $('#search');
+	//navbar toggler button function
 	navbarToggler.on('click', function(event) {
 		event.preventDefault();
 		if(navbarToggler.attr('aria-expanded') === 'false')
@@ -15,4 +18,17 @@ $(function (){
  			});
 		}
 	});
+	//slider show function 
+	carouselIndicators.on('click', 'li', function(event) {
+		event.preventDefault();
+		$($(this).attr('data-target')).children().eq($(this).attr('data-slide-to'))
+			.addClass('active').siblings().removeClass('active');
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+	//search form
+	search.on('click', 'label', function(event) {
+		event.preventDefault();
+		$('#'+$(this).attr('for')).toggleClass('active');
+	});
+
 });

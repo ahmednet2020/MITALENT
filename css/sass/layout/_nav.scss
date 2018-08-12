@@ -8,7 +8,7 @@ nav
     height: 100%;
     .navbar-toggler
     {
-    	width:60px;
+    	width:50px;
     	margin-right: 1em;
     	border: none;
     	.toggler-icon,
@@ -20,7 +20,7 @@ nav
 		    height: 2px;
 		    display: block;
 		    background-color: rgba($text-color,0.5);
-		    margin: 8px 0;
+		    margin: 4px 0;
 		    opacity: 1;
 		    transform: rotate(0) translate(0);
 	    	will-change:transform;
@@ -34,11 +34,11 @@ nav
 			}
 			&:before
 			{
-				transform: rotate(45deg) translate(7px, 7px);
+				transform: rotate(45deg) translate(3px, 4px);
 			}
 			&:after
 			{
-				transform: rotate(-45deg) translate(7px, -7px);
+				transform: rotate(-45deg) translate(5px, -6px);
 			}
 		}
     }
@@ -49,6 +49,10 @@ nav
     .nav-item
     {
     	padding: 0 1em;
+        letter-spacing: -2px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        @extend %fontheading;
     }
     .navbar-collapse
     {

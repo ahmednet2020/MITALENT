@@ -497,19 +497,23 @@ header .carousel {
   display: inline-block;
   width: 75%;
   height: 100%;
+  overflow: hidden;
 }
 header .carousel-item {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 9;
-  opacity: 0;
   height: 100%;
-  transition: opacity 0.3s ease-in-out;
+  transform: translate(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 header .carousel-item.active {
-  opacity: 1;
+  transform: translate(0);
   z-index: 99;
+}
+header .carousel-item.active ~ .carousel-item {
+  transform: translate(100%);
 }
 header .carousel-item figure {
   width: 75%;

@@ -430,6 +430,11 @@ nav .nav-item {
   letter-spacing: -2px;
   font-size: 1rem;
   text-transform: uppercase;
+  color: rgba(26, 26, 29, 0.5);
+  transition: color 0.2s ease;
+}
+nav .nav-item:hover {
+  color: #1a1a1d;
 }
 nav .navbar-collapse {
   background-color: #fff;
@@ -457,8 +462,8 @@ nav .navbar-collapse .nav-item {
 ======================*/
 header {
   position: relative;
-  min-height: 500px;
-  height: 500px;
+  min-height: 800px;
+  height: 800px;
   height: 100vh;
   background-color: #fff;
   overflow: hidden;
@@ -520,10 +525,12 @@ header .carousel-item figcaption {
   position: absolute;
   top: 25%;
   left: -50px;
-  color: #c3dbdb;
+  color: #1a1a1d;
 }
 header .carousel-item figcaption h2 {
   margin-bottom: 10px;
+  font-size: 3rem;
+  letter-spacing: 10px;
 }
 header .carousel-item .socal-links {
   position: relative;
@@ -532,10 +539,9 @@ header .carousel-item .socal-links {
 header .carousel-item .socal-links .line {
   display: block;
   width: 2px;
-  height: 33px;
+  height: 15%;
   background-color: #1a1a1d;
-  margin-left: 1.5em;
-  margin-top: 1em;
+  margin: 2em 0 2em 1.5em;
 }
 header .carousel-item .socal-links:after {
   content: attr(data-number);
@@ -560,6 +566,12 @@ header .carousel-item .socal-links .view-profile {
   border-radius: 0;
   margin: 0;
 }
+header .carousel-item .socal-links .view-profile:hover:after {
+  background-color: #c3dbdb;
+}
+header .carousel-item .socal-links .view-profile:hover span {
+  background-color: #1a1a1d;
+}
 header .carousel-item .socal-links .view-profile span {
   background-color: #b4d3d3;
   display: inline-block;
@@ -567,6 +579,7 @@ header .carousel-item .socal-links .view-profile span {
   height: 100%;
   line-height: 50px;
   color: #fff;
+  transition: background 0.2s ease;
 }
 header .carousel-item .socal-links .view-profile:after {
   content: "";
@@ -582,6 +595,7 @@ header .carousel-item .socal-links .view-profile:after {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background 0.2s ease;
 }
 header .carousel-dota {
   width: 24%;
@@ -625,6 +639,21 @@ header .carousel-indicators li.active:after {
 /*======================
 ====== end header =======
 ======================*/
+.clients .list-inline-item {
+  padding: 0.5em 1em;
+  color: rgba(26, 26, 29, 0.5);
+  transition: color 0.2s ease, border 0.2s ease;
+  text-transform: uppercase;
+}
+.clients .list-inline-item:hover {
+  border-bottom: 1px solid #1a1a1d;
+  color: #1a1a1d;
+}
+.clients .list-inline-item button {
+  text-transform: inherit;
+  color: inherit;
+}
+
 #search {
   position: relative;
 }

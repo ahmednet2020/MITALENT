@@ -52,7 +52,13 @@ nav
         letter-spacing: -2px;
         font-size: 1rem;
         text-transform: uppercase;
+        color: rgba($text-color,0.5);
+        transition:color 0.2s ease;
         @extend %fontheading;
+        &:hover
+        {
+            color: $text-color;
+        }
     }
     .navbar-collapse
     {

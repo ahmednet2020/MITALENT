@@ -4,8 +4,8 @@
 header
 {
 	position: relative;
-	min-height:500px;
-	height:500px;
+	min-height:800px;
+	height:800px;
 	height:100vh;
 	background-color: $white-color;
 	overflow: hidden;
@@ -75,10 +75,12 @@ header
 			position: absolute;
 		    top: 25%;
 		    left: -50px;
-		    color:$main-color;
+		    color:$text-color;
 		    h2
 		    {
 		    	margin-bottom:10px;
+		    	font-size: 3rem;
+    			letter-spacing: 10px;
 		    }
 		}
 	    .socal-links
@@ -89,10 +91,9 @@ header
 			{
 				display: block;
 			    width: 2px;
-			    height: 33px;
+			    height: 15%;
 			    background-color: $text-color;
-			    margin-left: 1.5em;
-			    margin-top: 1em;
+			    margin: 2em 0 2em 1.5em;
 			}
 			&:after
 			{
@@ -120,6 +121,17 @@ header
 			    padding: 0;
 			    border-radius: 0;
 			    margin: 0;
+			    &:hover
+			    {
+			    	&:after
+			    	{
+			    		background-color: $main-color;
+			    	}
+			    	span
+			    	{
+			    		background-color: $text-color;
+			    	}
+			    }
 			    span
 			    {
 			    	background-color: $main-color2;
@@ -128,6 +140,7 @@ header
 				    height: 100%;
 				    line-height: 50px;
 				    color:$white-color;
+        			transition:background 0.2s ease;
 			    }
 			    &:after
 			    {
@@ -144,6 +157,7 @@ header
 				    text-rendering: auto;
 				    -webkit-font-smoothing: antialiased;
 				    -moz-osx-font-smoothing: grayscale;
+        			transition:background 0.2s ease;
 			    }
 			}
 		}

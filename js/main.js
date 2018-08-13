@@ -2,6 +2,7 @@ $(function (){
 	var navbarToggler = $('.navbar-toggler');
 	var carouselIndicators = $('.carousel-indicators');
 	var search = $('#search');
+	var btnFilter = $('.btn-filter');
 	//navbar toggler button function
 	navbarToggler.on('click', function(event) {
 		event.preventDefault();
@@ -30,5 +31,17 @@ $(function (){
 		event.preventDefault();
 		$('#'+$(this).attr('for')).toggleClass('active');
 	});
-
+	//clients filter
+	btnFilter.on('click', function(event) {
+		event.preventDefault();
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		if($(this).data('target') === 'all')
+		{
+			$(".client[data-filter]").parent().fadeIn('500');
+			return;
+		} else {
+			$(".client:not([data-filter="+$(this).data('target')+"])").parent().css("display","none");
+			$(".client[data-filter="+$(this).data('target')+"]").parent().fadeIn('500');
+		}
+	});
 });

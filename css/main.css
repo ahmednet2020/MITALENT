@@ -475,7 +475,6 @@ header .navbar-brand {
 header .top-bar {
   display: flex;
   height: 75%;
-  height: 75vh;
   align-items: flex-start;
 }
 header .search {
@@ -487,9 +486,7 @@ header .search {
 }
 header .slider {
   height: 50%;
-  height: 50vh;
   top: -25%;
-  top: -25vh;
   position: relative;
   z-index: 99;
 }
@@ -559,7 +556,7 @@ header .carousel-item .socal-links .list-group-item {
   border: none;
   padding: 0.5em 1em;
 }
-header .carousel-item .socal-links .view-profile {
+header .carousel-item .socal-links .btn {
   position: absolute;
   bottom: -1px;
   width: 100%;
@@ -570,13 +567,13 @@ header .carousel-item .socal-links .view-profile {
   border-radius: 0;
   margin: 0;
 }
-header .carousel-item .socal-links .view-profile:hover:after {
+header .carousel-item .socal-links .btn:hover:after {
   background-color: #c3dbdb;
 }
-header .carousel-item .socal-links .view-profile:hover span {
+header .carousel-item .socal-links .btn:hover span {
   background-color: #1a1a1d;
 }
-header .carousel-item .socal-links .view-profile span {
+header .carousel-item .socal-links .btn span {
   background-color: #b4d3d3;
   display: inline-block;
   width: 100%;
@@ -585,7 +582,7 @@ header .carousel-item .socal-links .view-profile span {
   color: #fff;
   transition: background 0.2s ease;
 }
-header .carousel-item .socal-links .view-profile:after {
+header .carousel-item .socal-links .btn:after {
   content: "";
   width: 50%;
   height: 100%;
@@ -648,14 +645,70 @@ header .carousel-indicators li.active:after {
   color: rgba(26, 26, 29, 0.5);
   transition: color 0.2s ease, border 0.2s ease;
   text-transform: uppercase;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
 }
-.clients .list-inline-item:hover {
-  border-bottom: 1px solid #1a1a1d;
+.clients .list-inline-item:hover, .clients .list-inline-item.active {
+  border-bottom-color: #1a1a1d;
   color: #1a1a1d;
 }
 .clients .list-inline-item button {
   text-transform: inherit;
   color: inherit;
+}
+.clients figure {
+  position: relative;
+  margin: 0;
+}
+.clients figure img {
+  height: 250px;
+}
+.clients figure:hover figcaption {
+  opacity: 1;
+}
+.clients figcaption {
+  background-color: rgba(180, 211, 211, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  padding: 1em;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.clients .client-link {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #1a1a1d;
+  padding: 8px 12px;
+  transform: rotate(-45deg);
+}
+.clients .client-title {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  width: 100%;
+  padding: 1em;
+  color: #fff;
+}
+.clients .client-title h4 {
+  margin-bottom: 5px;
+}
+.clients .btn {
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+  border-radius: 25px;
+  padding: 0.5em 1em;
 }
 
 #search {
@@ -686,6 +739,16 @@ header .carousel-indicators li.active:after {
   right: 5%;
   z-index: 99;
   cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #b4d3d3;
+  border: none;
+  transition: background 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #1a1a1d;
 }
 
 /* start media style */

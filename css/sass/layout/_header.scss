@@ -18,7 +18,6 @@ header
 	{
 		display: flex;
 		height:75%;
-	    height: 75vh;
 	    align-items: flex-start;
 	}
 	.search
@@ -32,9 +31,7 @@ header
 	.slider
 	{
 		height:50%;
-	    height: 50vh;
 	    top: -25%;
-	    top: -25vh;
 	    position: relative;
 	    z-index: 99;
 	}
@@ -115,7 +112,7 @@ header
     			border: none;
     			padding: 0.5em 1em;
 			}
-			.view-profile
+			.btn
 			{
 			    position: absolute;
 			    bottom: -1px;

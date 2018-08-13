@@ -1,3 +1,6 @@
+/*======================
+====== start forms style =======
+======================*/
 #search
 {
 	position: relative;
@@ -7,16 +10,16 @@
 	    padding: 0.5em;
 	    width: 100%;
 	    display: inline-block;
-	    border-radius: 50px;
 	    position: relative;
 	    z-index: 9;
-	    transform: scale(0,1);
-	    transform-origin: right;
 	    will-change:transform;
-	    transition:transform 0.3s ease-in-out;
+	    @include border-radius(50px);
+	    @include scale((0,1));
+	    @include transform-origin(right);
+    	@include transition(transform 0.3s ease-in-out);
 	    &.active
 	    {
-	    	transform: scale(1);
+	    	@include scale(1);
 	    }
 	}
 	label
@@ -31,3 +34,6 @@
     	cursor: pointer;
 	}
 }
+/*======================
+====== end forms style =======
+======================*/

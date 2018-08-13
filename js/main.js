@@ -22,7 +22,7 @@ $(function (){
 	//slider show function 
 	carouselIndicators.on('click', 'li', function(event) {
 		event.preventDefault();
-		$($(this).attr('data-target')).children().eq($(this).attr('data-slide-to'))
+		$($(this).attr('data-target')).find('.carousel-item').eq($(this).attr('data-slide-to'))
 			.addClass('active').siblings().removeClass('active');
 		$(this).addClass('active').siblings().removeClass('active');
 	});

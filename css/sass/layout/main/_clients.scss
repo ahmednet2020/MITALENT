@@ -1,14 +1,17 @@
+/*======================
+====== start clients =======
+======================*/
 .clients
 {
 	.list-inline-item
 	{
 		padding: 0.5em 1em;
         color: rgba($text-color,0.5);
-        transition:color 0.2s ease,border 0.2s ease;
 		text-transform: uppercase;
 		border-bottom-width: 1px;
 		border-bottom-style: solid;
 		border-bottom-color: transparent;
+	    @include transition(color 0.2s ease, border 0.2s ease);
 		&:hover,
 		&.active
 		{
@@ -34,7 +37,7 @@
 	    {
 			figcaption
 			{
-	    		opacity: 1;
+	    		@include opacity(1);
 			}
 
 	    }
@@ -51,17 +54,17 @@
 	    width: 100%;
 	    text-align: right;
 	    padding: 1em;
-	    opacity: 0;
-        transition:opacity 0.3s ease-in-out;
+	    @include opacity(0);
+	    @include transition(opacity 0.3s ease-in-out);
 	}
 	.client-link
 	{
 		display: inline-block;
-	    border-radius: 50%;
 	    background-color: $white-color;
 	    color:$text-color;
 	    padding: 8px 12px;
-	    transform: rotate(-45deg);
+	    @include rotate(-45deg);
+	    @include border-radius(50%);
 	}
 	.client-title
 	{
@@ -84,7 +87,10 @@
 		margin: 0 auto;
 	    display: block;
 	    margin-top: 50px;
-	    border-radius: 25px;
 	    padding: 0.5em 1em;
+	    @include border-radius(25px);
 	}
 }
+/*======================
+====== end clients =======
+======================*/

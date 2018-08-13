@@ -16,18 +16,16 @@ header
 	}
 	.top-bar
 	{
-		display: flex;
 		height:75%;
-	    align-items: flex-start;
 	}
 	.search
 	{
-		flex: 1 0 auto;
 	    padding: 0.5em 1em;
 	    background-color: $main-color;
-	    display: flex;
 	    height: 100%;
+	    @include flex(1, 0, auto);
 	}
+	//start slider
 	.slider
 	{
 		height:50%;
@@ -49,15 +47,15 @@ header
 	    left: 0;
 	    z-index: 9;
 	    height: 100%;
-	    transform: translate(-100%);
-	    transition:transform 0.3s ease-in-out;
+	    @include translate(-100%);
+	    @include transition(transform 0.3s ease-in-out);
 	    &.active
 	    {
-	    	transform: translate(0);
 	    	z-index: 99;
+	   		@include translate(0);
 	    	& ~ .carousel-item
 	    	{
-	    		transform: translate(100%);
+	   			@include translate(100%);
 	    	}
 	    }
 		figure
@@ -88,7 +86,7 @@ header
 	    .socal-links
 		{
 			position: relative;
-			flex: 1 0 auto;
+	    	@include flex(1, 0, auto);
 			.line
 			{
 				display: block;
@@ -101,8 +99,8 @@ header
 			{
 				content: attr(data-number);
 			    padding: 0.5em 1em;
-			    transform: rotate(-90deg);
 			    display: inline-block;
+			    @include rotate(-90deg);
 			    @extend %fontheading; 
 			}
 			.list-group-item
@@ -142,7 +140,8 @@ header
 				    height: 100%;
 				    line-height: 50px;
 				    color:$white-color;
-        			transition:background 0.2s ease;
+	    			@include transition(background 0.2s ease);
+
 			    }
 			    &:after
 			    {
@@ -159,7 +158,7 @@ header
 				    text-rendering: auto;
 				    -webkit-font-smoothing: antialiased;
 				    -moz-osx-font-smoothing: grayscale;
-        			transition:background 0.2s ease;
+	    			@include transition(background 0.2s ease);        			
 			    }
 			}
 		}
@@ -209,7 +208,7 @@ header
 			}
 		}
 	}
-
+	//end slider
 }
 /*======================
 ====== end header =======

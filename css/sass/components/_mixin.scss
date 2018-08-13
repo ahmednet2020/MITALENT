@@ -8,7 +8,7 @@
 }
 
 //perfix mixin
-@mixin perfix($prop, $value, $perfix:(webkit moz ms))
+@mixin perfix($prop, $value, $perfix:(webkit,o,moz,ms))
 {
     @each $i in $perfix
     {
@@ -48,9 +48,14 @@
     @include perfix(transform, $value);
 }
 //translate mixin
-@mixin translate($x, $y)
+@mixin translate($x, $y: 0)
 {
-    @include perfix(transform,translate($x, $y));
+    @if $y == 0
+    {
+        @include perfix(transform,translate($x));
+    } @else {
+        @include perfix(transform,translate($x, $y));
+    }
 }
 @mixin translateX($x)
 {
@@ -124,12 +129,12 @@
     @include perfix(transform,rotate3d($x,$y,$z, $deg));
 }
 //box shadow
-@mixin boxshadow($x)
+@mixin box-shadow($x...)
 {
     @include perfix(box-shadow, $x);
 }
 //transition mixin
-@mixin transition($value)
+@mixin transition($value...)
 {
     @include perfix(transition, $value);
 }
@@ -183,18 +188,56 @@
 {
     @include perfix(border-radius, $value,(webkit moz)); 
 }
+//
+@mixin opacity($val)
+{
+    opacity: $val;
+    filter: alpha(opacity=($val*100));
+}
 //scroll-behavior
 @mixin scroll-behavior($val:smooth)
 {
     @include perfix(scroll-behavior,$val,(webkit moz));
 }
 //flex box 
-@mixin flex()
+@mixin d-flex()
 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+}
+@mixin flex-direction($val)
+{
+    @if $val  == row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+    } @else if  $val  == column {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    } @else if  $val  == 'row-reverse' {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+    } @else if  $val  == 'column-reverse' {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+    }
+    -webkit-flex-direction: $val;
+    -ms-flex-direction: $val;
+    flex-direction: $val;
+}
+@mixin flex-wrap($val)
+{
+    -webkit-flex-wrap: $val;
+    -ms-flex-wrap: $val;
+    flex-wrap: $val;
+}
+@mixin justify-content($val)
+{
+    -webkit-box-pack: $val;
+    -webkit-justify-content: $val;
+    -ms-flex-pack: $val;
+    justify-content: $val;
 }
 @mixin align-items($val)
 {
@@ -202,4 +245,17 @@
     -webkit-align-items: $val;
     -ms-flex-align: $val;
     align-items: $val;
+}
+@mixin align-content($val)
+{
+    -webkit-align-content: $val;
+    -ms-flex-line-pack: $val;
+    align-content: $val;
+}
+@mixin flex($grow, $shrink, $basic)
+{
+    -webkit-box-flex: $grow;
+    -webkit-flex: $grow $shrink $basic;
+    -ms-flex: $grow $shrink $basic;
+    flex: $grow $shrink $basic;
 }

@@ -1,11 +1,17 @@
+/*======================
+====== start buttons style =======
+======================*/
 .btn-primary
 {
 	color: $white-color;
     background-color: $main-color2;
     border:none;
-    transition:background 0.2s ease;
+    @include transition(background 0.2s ease);
     &:hover
     {
     	background-color: $text-color;
     }
 }
+/*======================
+====== end buttons style =======
+======================*/

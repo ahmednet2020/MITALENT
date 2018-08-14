@@ -11,7 +11,8 @@ $dir:ltr;
 		'./components/normalize',
 		'./components/typography';
 //layout
-@import './layout/nav',
+@import './layout/preload',
+		'./layout/nav',
 		'./layout/header',
 		'./layout/main',
 		'./layout/footer';

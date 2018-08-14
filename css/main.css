@@ -70,6 +70,7 @@ h6,
 html, body {
   font-size: 16px;
   height: 100%;
+  text-align: left;
 }
 
 p {
@@ -450,7 +451,7 @@ header .carousel-item .socal-links .line {
   width: 2px;
   height: 15%;
   background-color: #1a1a1d;
-  margin: 2em 0 2em 1.5em;
+  margin: 2em 1.5em;
 }
 header .carousel-item .socal-links:after {
   content: attr(data-number);
@@ -674,6 +675,9 @@ header .carousel-indicators li.active:after {
   overflow: hidden;
 }
 .stories .media:hover h3 {
+  display: block;
+  height: 75%;
+  overflow: hidden;
   color: #c3dbdb;
 }
 .stories .media:hover figcaption {
@@ -691,8 +695,8 @@ header .carousel-indicators li.active:after {
   color: #fff;
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   right: 0;
   width: 100%;
   height: 100%;
@@ -705,12 +709,21 @@ header .carousel-indicators li.active:after {
   -ms-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
+.stories .media-body {
+  position: relative;
+  height: 100%;
+}
 .stories .time {
   color: rgba(26, 26, 29, 0.5);
   margin-top: 10px;
   display: inline-block;
   text-transform: capitalize;
   font-size: 0.8rem;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /*======================

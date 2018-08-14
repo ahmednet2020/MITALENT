@@ -15,7 +15,7 @@
 	    will-change:transform;
 	    @include border-radius(50px);
 	    @include scale((0,1));
-	    @include transform-origin(right);
+	    @include transform-origin(#{$right});
     	@include transition(transform 0.3s ease-in-out);
 	    &.active
 	    {
@@ -29,7 +29,7 @@
 	    font-size: 1.5rem;
 	    position: absolute;
 	    top: 0;
-	    right: 5%;
+	    #{$right}: 5%;
 	    z-index: 99;
     	cursor: pointer;
 	}

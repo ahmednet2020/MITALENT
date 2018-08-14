@@ -44,7 +44,7 @@ header
 	{
 		position: absolute;
 	    top: 0;
-	    left: 0;
+	    #{$left}: 0;
 	    z-index: 9;
 	    height: 100%;
 	    @include translate(-100%);
@@ -74,7 +74,7 @@ header
 		{
 			position: absolute;
 		    top: 25%;
-		    left: -50px;
+		    #{$left}: -50px;
 		    color:$text-color;
 		    h2
 		    {
@@ -93,7 +93,7 @@ header
 			    width: 2px;
 			    height: 15%;
 			    background-color: $text-color;
-			    margin: 2em 0 2em 1.5em;
+			    margin: 2em 1.5em;
 			}
 			&:after
 			{
@@ -116,7 +116,7 @@ header
 			    bottom: -1px;
 			    width: 100%;
 			    height: 50px;
-			    left: 0;
+			    #{$left}: 0;
 			    z-index: 99;
 			    padding: 0;
 			    border-radius: 0;
@@ -149,7 +149,7 @@ header
 				    width: 50%;
 				    height: 100%;
 				    background-color: $white-color;
-				    margin-left: -5px;
+				    margin-#{$left}: -5px;
 				    vertical-align: top;
 				    display: inline-block;
 				    font: normal normal normal 14px/1 FontAwesome;
@@ -175,7 +175,7 @@ header
 	{
 		display: block;
 		margin:0;
-		padding-left:2em;
+		padding-#{$left}:2em;
 		li
 		{
 			text-indent:0px;
@@ -202,7 +202,7 @@ header
     			background: none;
 				width: 20%;
 			    height: 2px;
-			    margin-left:20px;
+			    margin-#{$left}:20px;
 			    background-color: $text-color;
 			    vertical-align: middle;
 			}

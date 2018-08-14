@@ -1,0 +1,64 @@
+/*======================
+====== start stories =======
+======================*/
+.stories
+{
+	text-align: center;
+	.title-h
+	{
+	    border-bottom: 1px solid;
+	    padding-bottom: 1em;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.media
+	{
+		margin-bottom: 10px;
+		height: 125px;
+		overflow: hidden;
+	    &:hover
+	    {
+			h3
+			{
+				color:$main-color;
+			}
+			figcaption
+			{
+		   		@include opacity(1);
+			}
+	    }
+	}
+	figure
+	{
+		position: relative;
+		width:30%;
+		height: 100%;
+	}
+	figcaption
+	{
+		display: inline-block;
+		background-color: $main-color;
+		color:$white-color;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    width: 100%;
+	    height: 100%;
+	    text-align: center;
+	    @include opacity(0);
+    	@include transition(opacity 0.3s ease-in-out);
+	}
+	.time
+	{
+		color:rgba($text-color,0.5);
+		margin-top: 10px;
+		display: inline-block;
+		text-transform: capitalize;
+		font-size: 0.8rem;
+	}
+}
+/*======================
+====== end stories =======
+======================*/

@@ -1,2 +1,22 @@
-@import './main/clients';
-@import './main/stories';
+@import './main/clients',
+ 		'./main/stories',
+		'./main/news';
+
+figure
+{
+	position: relative;
+	height: 100%;
+}
+.time
+{
+	color:rgba($text-color,0.5);
+	margin-top: 10px;
+	display: inline-block;
+	text-transform: capitalize;
+	font-size: 0.8rem;
+	position: absolute;
+    top: auto;
+    bottom: 0;
+    #{$left}: 0;
+    #{$right}: 0;
+}

@@ -1,0 +1,111 @@
+.news
+{
+	img
+	{
+		object-fit: cover;
+	}
+	.carousel,
+	.carousel-inner
+	{
+		min-height:400px;
+		height: 100%;
+	}
+	.carousel-indicators
+	{
+		bottom: 20%;
+		li
+		{
+			width: 15px;
+			height: 15px;
+			background-color: $white-color;
+			cursor: pointer;
+			margin: 5px;
+			@include border-radius(50%);
+		}	
+	}
+	.carousel-item
+	{
+		display: block;
+		position: absolute;
+	    top: 0;
+	    #{$left}: 0;
+	    z-index: 8;
+	    height: 100%;
+	    @include translate(-100%);
+	    @include transition(transform 0.3s ease-in-out);
+	    &.active
+	    {
+	    	z-index: 9;
+	   		@include translate(0);
+	    	& ~ .carousel-item
+	    	{
+	   			@include translate(100%);
+	    	}
+	    }
+		figure
+		{
+			height: 100%;
+			img
+			{
+				height: 85%;
+			}
+		}
+		figcaption
+		{
+			height: 15%;
+			margin-top: 10px;
+			overflow: hidden;
+		}
+		.time
+		{
+			position: static;
+		}
+	}
+	.trending
+	{
+		position: relative;
+		min-height:400px;
+		height: 400px;
+		height: 70vh;
+		&:before
+		{
+			content: "trending";
+			position: absolute;
+			top: 10px;
+			#{$right}: 10px;
+			background-color: $white-color;
+			z-index: 999;
+			padding: 0.5em 1em;
+			text-transform: uppercase;
+			font-size: 0.8rem;
+			line-height: 1;
+   			@extend %fontheading;
+		}
+		figcaption
+		{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			#{$left}: 0;
+			color: $white-color;
+			background: #b4d3d3;
+			width: 30%;
+		}
+		.time
+		{
+			color: $white-color;
+			#{$left}: auto;
+			#{$right}:auto;
+		}
+		.trending-title
+		{
+			position: absolute;
+			top: auto;
+			bottom: 1em;
+			#{$left}: 0;
+			#{$right}:0;
+			width:100%;
+			padding: 1em;
+		}
+	}	
+}

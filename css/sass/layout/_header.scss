@@ -45,13 +45,13 @@ header
 		position: absolute;
 	    top: 0;
 	    #{$left}: 0;
-	    z-index: 9;
+	    z-index: 8;
 	    height: 100%;
 	    @include translate(-100%);
 	    @include transition(transform 0.3s ease-in-out);
 	    &.active
 	    {
-	    	z-index: 99;
+	    	z-index: 9;
 	   		@include translate(0);
 	    	& ~ .carousel-item
 	    	{
@@ -64,10 +64,13 @@ header
 		    position: relative;
 		    height: 100%;
 		    display: block;
+		    background-color:$white-color;
 		    img
 		    {
 		    	width: 100%;
 			    height: 100%;
+			    @include opacity(0.5);
+			    @include perfix(object-fit,cover);
 		    }
 		}
 		figcaption

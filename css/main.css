@@ -723,79 +723,19 @@ header .carousel-indicators li.active:after {
 /*======================
 ====== end stories =======
 ======================*/
+/*======================
+====== start news =======
+======================*/
 .news img {
   object-fit: cover;
 }
-.news .carousel,
-.news .carousel-inner {
-  min-height: 400px;
-  height: 100%;
-}
-.news .carousel-indicators {
-  bottom: 20%;
-}
-.news .carousel-indicators li {
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  cursor: pointer;
-  margin: 5px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-.news .carousel-item {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 8;
-  height: 100%;
-  -webkit-transform: translate(-100%);
-  -o-transform: translate(-100%);
-  -moz-transform: translate(-100%);
-  -ms-transform: translate(-100%);
-  transform: translate(-100%);
-  -webkit-transition: transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  -moz-transition: transform 0.3s ease-in-out;
-  -ms-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-}
-.news .carousel-item.active {
-  z-index: 9;
-  -webkit-transform: translate(0);
-  -o-transform: translate(0);
-  -moz-transform: translate(0);
-  -ms-transform: translate(0);
-  transform: translate(0);
-}
-.news .carousel-item.active ~ .carousel-item {
-  -webkit-transform: translate(100%);
-  -o-transform: translate(100%);
-  -moz-transform: translate(100%);
-  -ms-transform: translate(100%);
-  transform: translate(100%);
-}
-.news .carousel-item figure {
-  height: 100%;
-}
-.news .carousel-item figure img {
-  height: 85%;
-}
-.news .carousel-item figcaption {
-  height: 15%;
-  margin-top: 10px;
-  overflow: hidden;
-}
-.news .carousel-item .time {
-  position: static;
-}
-.news .trending {
+.news .trending,
+.news .news-blog,
+.news #blog-slider {
   position: relative;
   min-height: 400px;
   height: 400px;
-  height: 70vh;
+  height: 40vh;
 }
 .news .trending:before {
   content: "trending";
@@ -832,7 +772,116 @@ header .carousel-indicators li.active:after {
   width: 100%;
   padding: 1em;
 }
+.news .carousel,
+.news .carousel-inner {
+  height: 100%;
+}
+.news .carousel-indicators {
+  bottom: 20%;
+}
+.news .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  margin: 5px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.news .carousel-indicators li.active, .news .carousel-indicators li:hover {
+  background-color: #fff;
+}
+.news .carousel-item {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  height: 100%;
+  -webkit-transform: translate(-100%);
+  -o-transform: translate(-100%);
+  -moz-transform: translate(-100%);
+  -ms-transform: translate(-100%);
+  transform: translate(-100%);
+  -webkit-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+.news .carousel-item.active {
+  z-index: 9;
+  -webkit-transform: translate(0);
+  -o-transform: translate(0);
+  -moz-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+.news .carousel-item.active ~ .carousel-item {
+  -webkit-transform: translate(100%);
+  -o-transform: translate(100%);
+  -moz-transform: translate(100%);
+  -ms-transform: translate(100%);
+  transform: translate(100%);
+}
+.news .carousel-item,
+.news .news-blog {
+  overflow: hidden;
+}
+.news .carousel-item figure,
+.news .news-blog figure {
+  height: 100%;
+}
+.news .carousel-item figure img,
+.news .news-blog figure img {
+  height: 85%;
+}
+.news .carousel-item figcaption,
+.news .news-blog figcaption {
+  height: 15%;
+  padding: 10px 0;
+  overflow: hidden;
+}
+.news .carousel-item .time,
+.news .news-blog .time {
+  position: static;
+}
+.news .news-blog figure img {
+  height: 75%;
+}
+.news .news-blog figcaption {
+  height: 25%;
+}
+.news #news-slider {
+  min-height: 600px;
+  height: 600px;
+  height: 100%;
+}
+.news #blog-slider .carousel-indicators {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: auto;
+}
+.news #blog-slider img {
+  height: 100%;
+}
+.news #blog-slider figcaption {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  left: 20px;
+  bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  word-spacing: 5px;
+  padding: 10px 0;
+  overflow: hidden;
+}
 
+/*======================
+====== end news =======
+======================*/
 figure {
   position: relative;
   height: 100%;

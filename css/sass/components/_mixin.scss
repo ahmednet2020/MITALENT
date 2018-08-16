@@ -1,4 +1,5 @@
 // main mixin for media query size
+//@include media($size-var){}
 @mixin media($media)
 {
 	@media #{$media}

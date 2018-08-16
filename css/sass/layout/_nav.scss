@@ -34,11 +34,11 @@ nav
 			}
 			&:before
 			{
-                @include transform(rotate(45deg) translate(3px, 4px));
+                @include transform(rotate(405deg) translate(3px, 4px));
 			}
 			&:after
 			{
-                @include transform(rotate(-45deg) translate(5px, -6px));
+                @include transform(rotate(-405deg) translate(5px, -6px));
 			}
 		}
     }

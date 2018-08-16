@@ -277,18 +277,18 @@ nav .navbar-toggler[aria-expanded=true] .toggler-icon {
   filter: alpha(opacity=0);
 }
 nav .navbar-toggler[aria-expanded=true]:before {
-  -webkit-transform: rotate(45deg) translate(3px, 4px);
-  -o-transform: rotate(45deg) translate(3px, 4px);
-  -moz-transform: rotate(45deg) translate(3px, 4px);
-  -ms-transform: rotate(45deg) translate(3px, 4px);
-  transform: rotate(45deg) translate(3px, 4px);
+  -webkit-transform: rotate(405deg) translate(3px, 4px);
+  -o-transform: rotate(405deg) translate(3px, 4px);
+  -moz-transform: rotate(405deg) translate(3px, 4px);
+  -ms-transform: rotate(405deg) translate(3px, 4px);
+  transform: rotate(405deg) translate(3px, 4px);
 }
 nav .navbar-toggler[aria-expanded=true]:after {
-  -webkit-transform: rotate(-45deg) translate(5px, -6px);
-  -o-transform: rotate(-45deg) translate(5px, -6px);
-  -moz-transform: rotate(-45deg) translate(5px, -6px);
-  -ms-transform: rotate(-45deg) translate(5px, -6px);
-  transform: rotate(-45deg) translate(5px, -6px);
+  -webkit-transform: rotate(-405deg) translate(5px, -6px);
+  -o-transform: rotate(-405deg) translate(5px, -6px);
+  -moz-transform: rotate(-405deg) translate(5px, -6px);
+  -ms-transform: rotate(-405deg) translate(5px, -6px);
+  transform: rotate(-405deg) translate(5px, -6px);
 }
 nav .navbar-items {
   -webkit-box-flex: 1;

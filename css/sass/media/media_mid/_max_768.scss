@@ -1,4 +1,14 @@
 //media maxsize 768px
 @include media($max_mid)
 {
+	footer
+	{
+		text-align: center;
+		.news-letter,
+		.links
+		{
+			text-align: inherit;
+			margin-top:1em;
+		}
+	}
 }

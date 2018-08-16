@@ -901,6 +901,47 @@ figure {
 }
 
 /*======================
+====== start footer =======
+======================*/
+footer .footer-brand {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+footer .news-letter {
+  text-align: right;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+footer .letter-span {
+  padding: 0 10px;
+  border-left: 1px solid rgba(26, 26, 29, 0.5);
+}
+footer .copy-right {
+  text-transform: capitalize;
+}
+footer .copy-links {
+  border-top: 1px solid rgba(26, 26, 29, 0.5);
+}
+footer .links {
+  text-align: right;
+}
+
+@media all and (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+  footer .news-letter,
+footer .links {
+    text-align: inherit;
+    margin-top: 1em;
+  }
+}
+/*======================
+====== end footer =======
+======================*/
+/*======================
 ====== start forms style =======
 ======================*/
 #search {
@@ -974,7 +1015,5 @@ figure {
 /*======================
 ====== end buttons style =======
 ======================*/
-/* start media style */
-/* end media style */
 
 /*# sourceMappingURL=main.css.map */

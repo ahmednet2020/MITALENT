@@ -1,12 +1,9 @@
+/*======================
+====== start main page style=======
+======================*/
 @import './main/clients',
  		'./main/stories',
 		'./main/news';
-
-figure
-{
-	position: relative;
-	height: 100%;
-}
 .time
 {
 	color:rgba($text-color,0.5);
@@ -20,3 +17,6 @@ figure
     #{$left}: 0;
     #{$right}: 0;
 }
+/*======================
+====== end main page style=======
+======================*/

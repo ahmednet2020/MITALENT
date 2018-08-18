@@ -3,6 +3,7 @@ $(function (){
 	var carouselIndicators = $('.carousel-indicators');
 	var search = $('#search');
 	var btnFilter = $('.btn-filter');
+	var carouselControl = $('.carousel-control');
 	//preload function
 	$(window).load(function() {
 		$('.preload').delay(5000).fadeOut('500');
@@ -47,5 +48,11 @@ $(function (){
 			$(".client:not([data-filter="+$(this).data('target')+"])").parent().css("display","none");
 			$(".client[data-filter="+$(this).data('target')+"]").parent().fadeIn('500');
 		}
+	});
+	//carouselControl
+	carouselControl.on('click', 'a', function(event) {
+		event.preventDefault();
+		$($(this).attr('data-target')).find('.carousel-item.active')[$(this).attr('data-slide')](".carousel-item")
+			.addClass('active').siblings().removeClass('active');
 	});
 });

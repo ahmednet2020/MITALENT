@@ -15,9 +15,11 @@ $dir:ltr;
 		'./layout/nav',
 		'./layout/header',
 		'./layout/time',
-		'./layout/news',
+		'./layout/index/stories',
+		'./layout/index/news',
+		'./layout/news/nav',
+		'./layout/news/pagination',
 		'./layout/footer';
-		
 		
 //form
 @import './form/form',

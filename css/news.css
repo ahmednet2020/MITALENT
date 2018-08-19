@@ -397,26 +397,6 @@ header .search {
 }
 
 /*======================
-====== start news page style=======
-======================*/
-nav {
-  height: auto;
-}
-nav .navbar-collapse {
-  right: 2em;
-}
-nav #search {
-  border-left: 1px solid rgba(26, 26, 29, 0.5);
-}
-nav #search input {
-  -webkit-transform: scale(1);
-  -o-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-/*======================
 ====== start stories =======
 ======================*/
 .stories {
@@ -670,6 +650,23 @@ nav #search input {
 /*======================
 ====== end news =======
 ======================*/
+nav {
+  height: auto;
+}
+nav .navbar-collapse {
+  right: 2em;
+}
+nav #search {
+  border-left: 1px solid rgba(26, 26, 29, 0.5);
+}
+nav #search input {
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 .pagination .page-link {
   line-height: 1.5;
   color: rgba(26, 26, 29, 0.5);
@@ -680,9 +677,6 @@ nav #search input {
   color: #1a1a1d;
 }
 
-/*======================
-====== end news page style=======
-======================*/
 /*======================
 ====== start footer =======
 ======================*/

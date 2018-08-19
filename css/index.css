@@ -397,9 +397,6 @@ header .search {
   right: 0;
 }
 
-/*======================
-====== start main page style=======
-======================*/
 .slider {
   height: 50%;
   top: -25%;
@@ -940,9 +937,6 @@ header .search {
 ====== end news =======
 ======================*/
 /*======================
-====== end main page style=======
-======================*/
-/*======================
 ====== start footer =======
 ======================*/
 footer .footer-brand {
@@ -1075,4 +1069,4 @@ footer .links {
 ====== end buttons style =======
 ======================*/
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */

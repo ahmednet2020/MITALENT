@@ -1,0 +1,17 @@
+nav
+{
+	height: auto;
+	.navbar-collapse
+	{
+		#{$right}: 2em;
+	}
+	//stop search form animtion
+	#search
+	{
+		input
+		{
+			@include scale((1));
+		}
+		border-left: 1px solid rgba($text-color,0.5);
+	}
+}

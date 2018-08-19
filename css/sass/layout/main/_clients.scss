@@ -8,9 +8,7 @@
 		padding: 0.5em 1em;
         color: rgba($text-color,0.5);
 		text-transform: uppercase;
-		border-bottom-width: 1px;
-		border-bottom-style: solid;
-		border-bottom-color: transparent;
+		border-bottom: 1px solid transparent;
 	    @include transition(color 0.2s ease, border 0.2s ease);
 		&:hover,
 		&.active

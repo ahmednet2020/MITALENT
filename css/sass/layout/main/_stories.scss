@@ -16,13 +16,15 @@
 		margin-bottom: 10px;
 		height: 125px;
 		overflow: hidden;
+		h3
+		{
+			height: 75%;
+			overflow: hidden;
+		}
 	    &:hover
 	    {
 			h3
 			{
-				display: block;
-   				height: 75%;
-				overflow: hidden;
 				color:$main-color;
 			}
 			figcaption

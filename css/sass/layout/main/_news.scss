@@ -3,21 +3,11 @@
 ======================*/
 .news
 {
-	height: 100%;
-	img
+	.up
 	{
-		object-fit: cover;
+		margin-top: -120px;
 	}
-	.trending,
-	.news-blog,
-	#blog-slider
-	{
-		position: relative;
-		min-height:400px;
-		height: 400px;
-		height: 40vh;
-	}
-	.trending
+	.trend
 	{
 		&:before
 		{
@@ -33,6 +23,24 @@
 			line-height: 1;
    			@extend %fontheading;
 		}
+	}
+	height: 100%;
+	img
+	{
+		-webkit-object-fit: cover;
+		object-fit: cover;
+	}
+	.trending,
+	.news-blog,
+	#blog-slider
+	{
+		position: relative;
+		min-height:400px;
+		height: 400px;
+		height: 40vh;
+	}
+	.trending
+	{
 		figcaption
 		{
 			position: absolute;
@@ -133,12 +141,12 @@
 		{
 			img
 			{
-				height: 75%;
+				height: 70%;
 			}
 		}
 		figcaption
 		{
-			height: 25%;
+			height: 30%;
 		}
 	}
 	#news-slider,
@@ -156,7 +164,7 @@
 			height: 100%;
 			top: 0;
 			bottom: 0;
-			left: auto;
+			#{$left}: auto;
 		}
 		img
 		{
@@ -166,7 +174,7 @@
 		{
 			position: absolute;
 			color: rgba($white-color, 0.7);
-			left: 20px;
+			#{$left}: 20px;
 			bottom: 20px;
 			text-transform: uppercase;
 			font-size: 1em;
@@ -181,18 +189,18 @@
 		{
 			position: absolute;
 			bottom: 10px;
-			left: 0;
-			right: 50%;
+			#{$left}: 0;
+			#{$right}: 50%;
 			height: 50px;
 			text-align: center;
 		}
 		.carousel-control-prev
 		{
-			left:25%;
+			#{$left}:25%;
 		}
 		.carousel-control-next
 		{
-			right:25%;
+			#{$right}:25%;
 		}
 		.carousel-control-next,
 		.carousel-control-prev
@@ -202,8 +210,8 @@
 		figcaption
 		{
 			color: $white-color;
-			left: 15%;
-			right: 15%;
+			#{$left}: 15%;
+			#{$right}: 15%;
 			bottom: 100px;
 			height: auto;
 		}

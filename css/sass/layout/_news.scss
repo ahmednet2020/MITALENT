@@ -1,25 +1,10 @@
 /*======================
 ====== start news page style=======
 ======================*/
-nav
-{
-	height: auto;
-	.navbar-collapse
-	{
-		right: 2em;
-	}
-	//stop search form animtion
-	#search
-	{
-		input
-		{
-			@include scale((1));
-		}
-		border-left: 1px solid rgba($text-color,0.5);
-	}
-}
-@import './main/stories',
-		'./main/news';
+@import './news/nav',
+		'./main/stories',
+		'./main/news',
+		'./news/pagination';
 /*======================
 ====== end news page style=======
 ======================*/

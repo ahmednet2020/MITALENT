@@ -61,7 +61,7 @@ html, body {
   font-family: "Raleway", sans-serif;
 }
 
-.news .trending:before, nav .nav-item, h1,
+.news .trend:before, nav .nav-item, h1,
 h2,
 h3,
 h4,
@@ -74,7 +74,7 @@ h6,
 
 html, body {
   font-size: 16px;
-  height: 100%;
+  min-height: 100%;
   text-align: left;
 }
 
@@ -383,6 +383,19 @@ header .search {
 /*======================
 ====== end header =======
 ======================*/
+.time {
+  color: rgba(26, 26, 29, 0.5);
+  margin-top: 10px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 /*======================
 ====== start news page style=======
 ======================*/
@@ -420,10 +433,11 @@ nav #search input {
   height: 125px;
   overflow: hidden;
 }
-.stories .media:hover h3 {
-  display: block;
+.stories .media h3 {
   height: 75%;
   overflow: hidden;
+}
+.stories .media:hover h3 {
   color: #c3dbdb;
 }
 .stories .media:hover figcaption {
@@ -467,18 +481,10 @@ nav #search input {
 .news {
   height: 100%;
 }
-.news img {
-  object-fit: cover;
+.news .up {
+  margin-top: -120px;
 }
-.news .trending,
-.news .news-blog,
-.news #blog-slider {
-  position: relative;
-  min-height: 400px;
-  height: 400px;
-  height: 40vh;
-}
-.news .trending:before {
+.news .trend:before {
   content: "trending";
   position: absolute;
   top: 10px;
@@ -489,6 +495,18 @@ nav #search input {
   text-transform: uppercase;
   font-size: 0.8rem;
   line-height: 1;
+}
+.news img {
+  -webkit-object-fit: cover;
+  object-fit: cover;
+}
+.news .trending,
+.news .news-blog,
+.news #blog-slider {
+  position: relative;
+  min-height: 400px;
+  height: 400px;
+  height: 40vh;
 }
 .news .trending figcaption {
   position: absolute;
@@ -589,10 +607,10 @@ nav #search input {
   position: static;
 }
 .news .news-blog figure img {
-  height: 75%;
+  height: 70%;
 }
 .news .news-blog figcaption {
-  height: 25%;
+  height: 30%;
 }
 .news #news-slider,
 .news #post-slider {
@@ -652,6 +670,16 @@ nav #search input {
 /*======================
 ====== end news =======
 ======================*/
+.pagination .page-link {
+  line-height: 1.5;
+  color: rgba(26, 26, 29, 0.5);
+  background-color: transparent;
+  border: none;
+}
+.pagination .page-link:hover {
+  color: #1a1a1d;
+}
+
 /*======================
 ====== end news page style=======
 ======================*/

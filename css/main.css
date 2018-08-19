@@ -62,7 +62,7 @@ html, body {
   font-family: "Raleway", sans-serif;
 }
 
-.news .trending:before, .slider .socal-links:after, nav .nav-item, h1,
+.news .trend:before, .slider .socal-links:after, nav .nav-item, h1,
 h2,
 h3,
 h4,
@@ -75,7 +75,7 @@ h6,
 
 html, body {
   font-size: 16px;
-  height: 100%;
+  min-height: 100%;
   text-align: left;
 }
 
@@ -384,6 +384,22 @@ header .search {
 /*======================
 ====== end header =======
 ======================*/
+.time {
+  color: rgba(26, 26, 29, 0.5);
+  margin-top: 10px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*======================
+====== start main page style=======
+======================*/
 .slider {
   height: 50%;
   top: -25%;
@@ -577,18 +593,13 @@ header .search {
 }
 
 /*======================
-====== start main page style=======
-======================*/
-/*======================
 ====== start clients =======
 ======================*/
 .clients .list-inline-item {
   padding: 0.5em 1em;
   color: rgba(26, 26, 29, 0.5);
   text-transform: uppercase;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: transparent;
+  border-bottom: 1px solid transparent;
   -webkit-transition: color 0.2s ease, border 0.2s ease;
   -o-transition: color 0.2s ease, border 0.2s ease;
   -moz-transition: color 0.2s ease, border 0.2s ease;
@@ -691,10 +702,11 @@ header .search {
   height: 125px;
   overflow: hidden;
 }
-.stories .media:hover h3 {
-  display: block;
+.stories .media h3 {
   height: 75%;
   overflow: hidden;
+}
+.stories .media:hover h3 {
   color: #c3dbdb;
 }
 .stories .media:hover figcaption {
@@ -738,18 +750,10 @@ header .search {
 .news {
   height: 100%;
 }
-.news img {
-  object-fit: cover;
+.news .up {
+  margin-top: -120px;
 }
-.news .trending,
-.news .news-blog,
-.news #blog-slider {
-  position: relative;
-  min-height: 400px;
-  height: 400px;
-  height: 40vh;
-}
-.news .trending:before {
+.news .trend:before {
   content: "trending";
   position: absolute;
   top: 10px;
@@ -760,6 +764,18 @@ header .search {
   text-transform: uppercase;
   font-size: 0.8rem;
   line-height: 1;
+}
+.news img {
+  -webkit-object-fit: cover;
+  object-fit: cover;
+}
+.news .trending,
+.news .news-blog,
+.news #blog-slider {
+  position: relative;
+  min-height: 400px;
+  height: 400px;
+  height: 40vh;
 }
 .news .trending figcaption {
   position: absolute;
@@ -860,10 +876,10 @@ header .search {
   position: static;
 }
 .news .news-blog figure img {
-  height: 75%;
+  height: 70%;
 }
 .news .news-blog figcaption {
-  height: 25%;
+  height: 30%;
 }
 .news #news-slider,
 .news #post-slider {
@@ -923,19 +939,6 @@ header .search {
 /*======================
 ====== end news =======
 ======================*/
-.time {
-  color: rgba(26, 26, 29, 0.5);
-  margin-top: 10px;
-  display: inline-block;
-  text-transform: capitalize;
-  font-size: 0.8rem;
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 /*======================
 ====== end main page style=======
 ======================*/

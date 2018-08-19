@@ -16,7 +16,7 @@
 {
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	#{$right}: 0;
 	background-color: $white-color;
 	color:$text-color;
 	padding: 1em;

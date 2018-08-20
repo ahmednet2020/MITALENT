@@ -10,11 +10,15 @@ $dir:ltr;
 		'./components/mixin',
 		'./components/normalize',
 		'./components/typography';
+
+//module
+@import './module/preload';
+
+
 //layout
-@import './layout/preload',
-		'./layout/nav',
+@import './layout/nav',
 		'./layout/header',
-		'./layout/time',
+		'./layout/section',
 		'./layout/index/slider',
 		'./layout/index/clients',
 		'./layout/index/stories',

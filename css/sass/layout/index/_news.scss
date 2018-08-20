@@ -85,10 +85,12 @@
 			cursor: pointer;
 			margin: 5px;
 			@include border-radius(50%);
+			@include scale(0.8);
 			&.active,
 			&:hover
 			{
 				background-color: $white-color;
+				@include scale(1.1);
 			}
 		}	
 	}

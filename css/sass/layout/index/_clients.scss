@@ -78,6 +78,10 @@
 	    {
 	    	margin-bottom: 5px;
 	    }
+	    span
+	   	{
+	   		text-transform: uppercase;
+	   	}
 	}
 	.btn
 	{
@@ -87,28 +91,50 @@
 	    padding: 0.5em 1em;
 	    @include border-radius(25px);
 	}
-	.clients-indicators
+	//slider
+	.clients-slider
 	{
+		.carousel-inner
+		{
+			height: 250px;
+		}
+		.carousel-item
+		{
+			position: absolute;
+		    top: 0;
+		    #{$left}: 0;
+		    display: block;
+		    @include translate(-100%);
+		    @include transition(transform 0.3s ease-in-out);
+		    &.active
+		    {
+		   		@include translate(0);
+		    	& ~ .carousel-item
+		    	{
+		   			@include translate(100%);
+		    	}
+		    }
+		}
 		.carousel-indicators
 		{
 			position: static;
-		}
-		li
-		{
-			width: 15px;
-			height: 15px;
-			background-color: rgba($text-color,0.5);
-			cursor: pointer;
-			margin:0 5px;
-			@include border-radius(50%);
-			@include scale(0.8);
-			&:hover,
-			&.active
+			li
 			{
-				background-color: $main-color;
-				@include scale(1.1);
+				width: 15px;
+				height: 15px;
+				background-color: rgba($text-color,0.5);
+				cursor: pointer;
+				margin:0 5px;
+				@include border-radius(50%);
+				@include scale(0.8);
+				&:hover,
+				&.active
+				{
+					background-color: $main-color;
+					@include scale(1.1);
+				}
+				
 			}
-			
 		}
 	}
 }

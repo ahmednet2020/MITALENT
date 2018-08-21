@@ -350,6 +350,15 @@ nav .navbar-collapse .nav-item {
   padding: 10px 1em;
 }
 
+@media all and (max-width: 768px) {
+  nav {
+    width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+}
 /*======================
 ====== end nav =======
 ======================*/
@@ -358,8 +367,8 @@ nav .navbar-collapse .nav-item {
 ======================*/
 header {
   position: relative;
-  min-height: 800px;
-  height: 800px;
+  min-height: 600px;
+  height: 600px;
   height: 100vh;
   background-color: #fff;
   overflow: hidden;
@@ -381,6 +390,15 @@ header .search {
   flex: 1 0 auto;
 }
 
+@media all and (max-width: 768px) {
+  header .top-bar {
+    height: auto;
+    margin-bottom: 1em;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
 /*======================
 ====== end header =======
 ======================*/
@@ -580,7 +598,7 @@ section .page-link:hover {
 }
 .slider .carousel-indicators li {
   text-indent: 0px;
-  margin: 1em 0;
+  padding: 0.5em 0;
   width: auto;
   height: auto;
   background: none;
@@ -605,6 +623,60 @@ section .page-link:hover {
   vertical-align: middle;
 }
 
+@media all and (max-width: 768px) {
+  .slider {
+    position: static;
+    top: 0;
+    height: 80%;
+  }
+  .slider .carousel-indicators {
+    padding: 0;
+  }
+  .slider .carousel {
+    width: 100%;
+  }
+  .slider figure,
+.slider .socal-links {
+    width: 100%;
+    height: 80%;
+  }
+  .slider figcaption {
+    top: 10px;
+    left: 10px;
+  }
+  .slider .carousel-dota {
+    text-align: center;
+    height: auto;
+    width: 100%;
+  }
+  .slider .carousel-dota li {
+    display: inline-block;
+    padding: 10px;
+  }
+  .slider .carousel-dota li.active:after {
+    display: none;
+  }
+  .slider .carousel-dota li.active {
+    color: #c3dbdb;
+  }
+  .slider .socal-links {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    right: 0;
+  }
+  .slider .socal-links .line, .slider .socal-links:after,
+.slider .socal-links .list-group-item {
+    display: none;
+  }
+  .slider .socal-links .btn {
+    bottom: -1px;
+  }
+  .slider .socal-links .btn:after {
+    display: none;
+  }
+}
 /*======================
 ====== start clients =======
 ======================*/

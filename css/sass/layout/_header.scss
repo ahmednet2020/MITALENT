@@ -4,8 +4,8 @@
 header
 {
 	position: relative;
-	min-height:800px;
-	height:800px;
+	min-height:600px;
+	height:600px;
 	height:100vh;
 	background-color: $white-color;
 	overflow: hidden;
@@ -24,6 +24,20 @@ header
 	    background-color: $main-color;
 	    height: 100%;
 	    @include flex(1, 0, auto);
+	}
+}
+//fixed media
+@include media($max_mid)
+{
+	header
+	{
+		.top-bar
+		{
+			height: auto;
+			margin-bottom: 1em;
+			@include flex-wrap(wrap);
+			
+		}
 	}
 }
 /*======================

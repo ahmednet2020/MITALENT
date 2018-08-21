@@ -6,7 +6,7 @@ $(function (){
 	var carouselControl = $('.carousel-control');
 	//preload function
 	$(window).load(function() {
-		$('.preload').delay(5000).fadeOut('500');
+		$('.preload').delay(1000).fadeOut('500');
 	});
 	//navbar toggler button function
 	navbarToggler.on('click', function(event) {
@@ -31,6 +31,18 @@ $(function (){
 			.addClass('active').siblings().removeClass('active');
 		$(this).addClass('active').siblings().removeClass('active');
 	});
+	//loop animation auto run slider
+	// carouselIndicators.each(function (i,e) {
+	// 	setInterval(function() {
+	// 		if($(e).find('li.active').next('li').length === 0)
+	// 		{
+	// 			$(e).find('li:first-child').click();
+	// 		} else {
+	// 			$(e).find('li.active').next('li').click();
+	// 		}
+	// 	}, 3000)
+	// });
+
 	//search form
 	search.on('click', 'label', function(event) {
 		event.preventDefault();
@@ -55,4 +67,19 @@ $(function (){
 		$($(this).attr('data-target')).find('.carousel-item.active')[$(this).attr('data-slide')](".carousel-item")
 			.addClass('active').siblings().removeClass('active');
 	});
+	//serviceWorker
+	if ('serviceWorker' in navigator) {
+	  window.addEventListener('load',(e) => {
+	    navigator.serviceWorker
+	    .register('../cashe.min.js')
+	    .then((registration) => {
+	      // Registration was successful
+	      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+	    })
+	    .catch((err) => {
+	      // registration failed :(
+	      console.log('ServiceWorker registration failed: ', err);
+	    });
+	  });
+	}
 });

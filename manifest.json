@@ -1,9 +1,15 @@
 {
-  "short_name": "helium",
-  "name": "helium-Template",
-  "icons": [],
-  "start_url": "./index.html",
+  "short_name": "MITALENT",
+  "name": "MITALENT-Template",
+  "icons": [
+  	 {
+      "src": "./icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#39b3f1",
+  "theme_color": "#c3dbdb",
   "background_color": "#ffffff"
 }

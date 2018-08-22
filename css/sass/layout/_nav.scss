@@ -21,7 +21,7 @@ nav
 		    display: block;
 		    background-color: rgba($text-color,0.5);
 		    margin: 4px 0;
-	    	will-change:transform;
+	    	will-change: transform, opacity;
             @include opacity(1);
             @include transform(rotate(0) translate(0));
             @include transition(transform 0.3s linear,opacity 0.3s ease);

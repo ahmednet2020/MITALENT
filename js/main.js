@@ -4,6 +4,30 @@ $(function (){
 	var search = $('#search');
 	var btnFilter = $('.btn-filter');
 	var carouselControl = $('.carousel-control');
+	//sw
+	if ('serviceWorker' in navigator) {
+	  window.addEventListener('load',(e) => {
+	    navigator.serviceWorker
+	    .register('../sw.js')
+	    .then((reg) => {
+	      // Registration was successful
+	      console.log('ServiceWorker registration successful with scope: ', reg.scope);
+	      //
+	      if(!navigator.serviceWorker.controller)
+	      {
+	      	return;
+	      }
+	      if(reg.waiting)
+	      {
+	      	reg.waiting.postMessage({action: 'skipWaiting'});
+	      	window.location.reload();
+	      }
+	    }).catch((err) => {
+	      // registration failed :(
+	      console.log('ServiceWorker registration failed: ', err);
+	    });
+	  });
+	}
 	//preload function
 	$(window).load(function() {
 		$('.preload').delay(1000).fadeOut('500');
@@ -32,16 +56,16 @@ $(function (){
 		$(this).addClass('active').siblings().removeClass('active');
 	});
 	//loop animation auto run slider
-	// carouselIndicators.each(function (i,e) {
-	// 	setInterval(function() {
-	// 		if($(e).find('li.active').next('li').length === 0)
-	// 		{
-	// 			$(e).find('li:first-child').click();
-	// 		} else {
-	// 			$(e).find('li.active').next('li').click();
-	// 		}
-	// 	}, 3000)
-	// });
+	carouselIndicators.each(function (i,e) {
+		setInterval(function() {
+			if($(e).find('li.active').next('li').length === 0)
+			{
+				$(e).find('li:first-child').click();
+			} else {
+				$(e).find('li.active').next('li').click();
+			}
+		}, 5000)
+	});
 
 	//search form
 	search.on('click', 'label', function(event) {
@@ -67,22 +91,4 @@ $(function (){
 		$($(this).attr('data-target')).find('.carousel-item.active')[$(this).attr('data-slide')](".carousel-item")
 			.addClass('active').siblings().removeClass('active');
 	});
-	//serviceWorker
-	function updateReady(worker)
-	{
-		worker.postMessage({action: 'skipWaiting'});
-	} 
-	if ('serviceWorker' in navigator) {
-	  window.addEventListener('load',(e) => {
-	    navigator.serviceWorker
-	    .register('../sw.js')
-	    .then((reg) => {
-	      // Registration was successful
-	      console.log('ServiceWorker registration successful with scope: ', reg.scope);
-	    }).catch((err) => {
-	      // registration failed :(
-	      console.log('ServiceWorker registration failed: ', err);
-	    });
-	  });
-	}
 });

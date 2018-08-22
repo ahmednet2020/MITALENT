@@ -1,10 +1,12 @@
 'use strict';
-const CACHE_NAME = 'v2.1.1';
+const CACHE_NAME = 'v7.5.1';
 const urlsToCache = [
   '/',
   'https://fonts.googleapis.com/css?family=Amaranth:700|Raleway',
   './css/bootstrap.min.css',
   './css/font-awesome.min.css',
+  './css/index.css',
+  './js/jquery.min.js',
   './js/main.js'
 ];
 //install event
@@ -13,6 +15,8 @@ self.addEventListener('install',(e) => {
   // Perform install steps
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache);
+    }).then((cache) => {
         return self.skipWaiting();
       }).catch((err)=> {
       	console.log(`open cashes erro: ${err}`)
@@ -24,13 +28,7 @@ self.addEventListener('activate', e => {
   // delete any old caches
   e.waitUntil(
     caches.keys().then(keys => Promise.all(
-      keys.map(key => {
-        if(key !== CACHE_NAME)
-        {
-          return caches.delete(key);
-        }
-        return key;
-      })
+        keys.map( key => (key === CACHE_NAME ? key:caches.delete(key)) )
       ).then(() => {
         console.log('remove the old cashe done');
       }).catch(() => {
@@ -61,8 +59,8 @@ self.addEventListener('fetch', e => {
       })
     )
 });
-//message event
 self.addEventListener('message', function(event) {
+  console.log("skipWaiting");
   if (event.data.action === 'skipWaiting') {
     self.skipWaiting();
   }

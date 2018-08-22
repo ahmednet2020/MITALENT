@@ -19,6 +19,7 @@
 	    #{$left}: 0;
 	    z-index: 8;
 	    height: 100%;
+	    will-change: transform;
 	    @include translate(-100%);
 	    @include transition(transform 0.3s ease-in-out);
 	    &.active

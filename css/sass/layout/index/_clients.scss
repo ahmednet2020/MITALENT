@@ -9,6 +9,7 @@
         color: rgba($text-color,0.5);
 		text-transform: uppercase;
 		border-bottom: 1px solid transparent;
+	    will-change: border, color;
 	    @include transition(color 0.2s ease, border 0.2s ease);
 		&:hover,
 		&.active
@@ -51,6 +52,7 @@
 	    width: 100%;
 	    text-align: right;
 	    padding: 1em;
+	    will-change: opacity;
 	    @include opacity(0);
 	    @include transition(opacity 0.3s ease-in-out);
 	}
@@ -104,6 +106,7 @@
 		    top: 0;
 		    #{$left}: 0;
 		    display: block;
+	    	will-change: transform;
 		    @include translate(-100%);
 		    @include transition(transform 0.3s ease-in-out);
 		    &.active
@@ -125,6 +128,7 @@
 				background-color: rgba($text-color,0.5);
 				cursor: pointer;
 				margin:0 5px;
+	    		will-change: transform;
 				@include border-radius(50%);
 				@include scale(0.8);
 				&:hover,

@@ -1,0 +1,20 @@
+// ===== start stories=========
+section(class="stories pt-5 pb-5")
+	.container
+		h2(class="title-h mb-5") our stories
+		// ======== start stories grid =======
+		div(class="row")
+			each stories in storiesList
+				div(class="col-12 col-md-6 col-lg-4")
+					a(class="media" href=`${stories.id}`)
+						figure(class="mr-3")
+							img(src=`${stories.img}`,
+								alt=`${stories.title}`,
+								title=`${stories.title}`)
+							figcaption(class="d-flex align-items-center justify-content-center")
+								<i class="fa fa-play" aria-hidden="true"></i>
+						div(class="media-body text-left")
+							h3(class="mt-0")= `${stories.title}`
+							time(class="time")= `${stories.time}`
+		// ======== end stories grid =======
+// ===== end stories=========

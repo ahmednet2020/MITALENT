@@ -70,6 +70,7 @@
 	}
 	//slider	
 	.carousel,
+	.blog-play,
 	.carousel-inner
 	{
 		height: 100%;
@@ -114,7 +115,6 @@
 	    	}
 	    }
 	}
-	.carousel-item,
 	.news-blog
 	{
 		overflow: hidden;
@@ -123,12 +123,12 @@
 			height: 100%;
 			img
 			{
-				height: 85%;
+				height: 70%;
 			}
 		}
 		figcaption
 		{
-			height: 15%;
+			height: 30%;
 			padding: 10px 0;
 			overflow: hidden;
 		}
@@ -137,26 +137,30 @@
 			position: static;
 		}
 	}
-	.news-blog
-	{
-		figure
-		{
-			img
-			{
-				height: 70%;
-			}
-		}
-		figcaption
-		{
-			height: 30%;
-		}
-	}
 	#news-slider,
 	#post-slider
 	{
 		min-height: 600px;
 		height:600px;
 		height:100%;
+	}
+	#news-slider
+	{
+		.news-blog
+		{
+			height:100%;
+		}
+		figure
+		{
+			img
+			{
+				height: 85%;
+			}
+		}
+		figcaption
+		{
+			height: 15%;
+		}
 	}
 	#blog-slider,
 	#post-slider

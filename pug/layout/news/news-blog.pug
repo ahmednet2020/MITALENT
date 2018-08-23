@@ -1,0 +1,11 @@
+// ====== start news blog
+div(class="news-blog")
+	figure
+		img(class="d-block",
+			src=`${news.img}`,
+			alt=`${news.title}`,
+			title=`${news.title}`)
+		figcaption
+			h4= `${news.title}`
+			time(class="time")= `${news.time}`
+// ====== end news blog

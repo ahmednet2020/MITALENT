@@ -263,7 +263,7 @@ nav .navbar-toggler .toggler-icon, nav .navbar-toggler:before, nav .navbar-toggl
   display: block;
   background-color: rgba(26, 26, 29, 0.5);
   margin: 4px 0;
-  will-change: transform;
+  will-change: transform, opacity;
   opacity: 1;
   filter: alpha(opacity=100);
   -webkit-transform: rotate(0) translate(0);
@@ -313,7 +313,7 @@ nav .nav-item {
   -ms-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
-nav .nav-item:hover {
+nav .nav-item:hover, nav .nav-item.active {
   color: #1a1a1d;
 }
 nav .navbar-collapse {
@@ -449,6 +449,7 @@ section .page-link:hover {
   left: 0;
   z-index: 8;
   height: 100%;
+  will-change: transform;
   -webkit-transform: translate(-100%);
   -o-transform: translate(-100%);
   -moz-transform: translate(-100%);
@@ -685,6 +686,7 @@ section .page-link:hover {
   color: rgba(26, 26, 29, 0.5);
   text-transform: uppercase;
   border-bottom: 1px solid transparent;
+  will-change: border, color;
   -webkit-transition: color 0.2s ease, border 0.2s ease;
   -o-transition: color 0.2s ease, border 0.2s ease;
   -moz-transition: color 0.2s ease, border 0.2s ease;
@@ -721,6 +723,7 @@ section .page-link:hover {
   width: 100%;
   text-align: right;
   padding: 1em;
+  will-change: opacity;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -777,6 +780,7 @@ section .page-link:hover {
   top: 0;
   left: 0;
   display: block;
+  will-change: transform;
   -webkit-transform: translate(-100%);
   -o-transform: translate(-100%);
   -moz-transform: translate(-100%);
@@ -811,6 +815,7 @@ section .page-link:hover {
   background-color: rgba(26, 26, 29, 0.5);
   cursor: pointer;
   margin: 0 5px;
+  will-change: transform;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -942,6 +947,7 @@ section .page-link:hover {
   padding: 1em;
 }
 .news .carousel,
+.news .blog-play,
 .news .carousel-inner {
   height: 100%;
 }
@@ -1004,39 +1010,37 @@ section .page-link:hover {
   -ms-transform: translate(100%);
   transform: translate(100%);
 }
-.news .carousel-item,
 .news .news-blog {
   overflow: hidden;
 }
-.news .carousel-item figure,
 .news .news-blog figure {
   height: 100%;
-}
-.news .carousel-item figure img,
-.news .news-blog figure img {
-  height: 85%;
-}
-.news .carousel-item figcaption,
-.news .news-blog figcaption {
-  height: 15%;
-  padding: 10px 0;
-  overflow: hidden;
-}
-.news .carousel-item .time,
-.news .news-blog .time {
-  position: static;
 }
 .news .news-blog figure img {
   height: 70%;
 }
 .news .news-blog figcaption {
   height: 30%;
+  padding: 10px 0;
+  overflow: hidden;
+}
+.news .news-blog .time {
+  position: static;
 }
 .news #news-slider,
 .news #post-slider {
   min-height: 600px;
   height: 600px;
   height: 100%;
+}
+.news #news-slider .news-blog {
+  height: 100%;
+}
+.news #news-slider figure img {
+  height: 85%;
+}
+.news #news-slider figcaption {
+  height: 15%;
 }
 .news #blog-slider .carousel-indicators,
 .news #post-slider .carousel-indicators {

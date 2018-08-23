@@ -1,0 +1,53 @@
+/*======================
+====== start footer =======
+======================*/
+footer
+{
+	.footer-brand
+	{
+		font-size:1.5rem;
+		text-transform: uppercase;
+	}
+	.news-letter
+	{
+		text-align: #{$right};
+		display: block;
+		width: 100%;
+		text-transform: uppercase;
+		font-size:1rem;
+	}
+	.letter-span
+	{
+		padding:0 10px;
+		border-left:1px solid rgba($text-color,0.5);
+	}
+	.copy-right
+	{
+		text-transform: capitalize;
+	}
+	.copy-links
+	{
+		border-top:1px solid rgba($text-color,0.5);
+	}
+	.links
+	{
+		text-align: #{$right};
+	}
+}
+//mobile fixed
+@include media($max_mid)
+{
+	footer
+	{
+		text-align: center;
+		.news-letter,
+		.links
+		{
+			text-align: inherit;
+			margin-top:1em;
+		}
+	}
+}
+/*======================
+====== end footer =======
+======================*/

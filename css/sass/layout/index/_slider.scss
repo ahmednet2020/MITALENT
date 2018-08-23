@@ -1,0 +1,258 @@
+//start slider
+.slider
+{
+	height:50%;
+    top: -25%;
+    position: relative;
+    z-index: 99;
+	.carousel
+	{
+		display: inline-block;
+	    width:75%;
+	    height: 100%;
+	    overflow: hidden;
+	}
+	.carousel-item
+	{
+		position: absolute;
+	    top: 0;
+	    #{$left}: 0;
+	    z-index: 8;
+	    height: 100%;
+	    will-change: transform;
+	    @include translate(-100%);
+	    @include transition(transform 0.3s ease-in-out);
+	    &.active
+	    {
+	    	z-index: 9;
+	   		@include translate(0);
+	    	& ~ .carousel-item
+	    	{
+	   			@include translate(100%);
+	    	}
+	    }
+	}
+	figure
+	{
+		width: 75%;
+	    position: relative;
+	    height: 100%;
+	    display: block;
+	    background-color:$white-color;
+	    img
+	    {
+	    	width: 100%;
+		    height: 100%;
+		    @include opacity(0.5);
+		    @include perfix(object-fit,cover);
+	    }
+	}
+	figcaption
+	{
+		position: absolute;
+	    top: 25%;
+	    #{$left}: -50px;
+	    color:$text-color;
+	    h2
+	    {
+	    	margin-bottom:10px;
+	    	font-size: 3rem;
+			letter-spacing: 10px;
+	    }
+	}
+	.socal-links
+	{
+		position: relative;
+    	@include flex(1, 0, auto);
+		.line
+		{
+			display: block;
+		    width: 2px;
+		    height: 15%;
+		    background-color: $text-color;
+		    margin: 2em 1.5em;
+		}
+		&:after
+		{
+			content: attr(data-number);
+		    padding: 0.5em 1em;
+		    display: inline-block;
+		    @include rotate(-90deg);
+		    @extend %fontheading; 
+		}
+		.list-group-item
+		{
+			background: none;
+			font-size: 1em;
+			border: none;
+			padding: 0.5em 1em;
+		}
+		.btn
+		{
+		    position: absolute;
+		    bottom: -1px;
+		    width: 100%;
+		    height: 50px;
+		    #{$left}: 0;
+		    z-index: 99;
+		    padding: 0;
+		    border-radius: 0;
+		    margin: 0;
+		    &:hover
+		    {
+		    	&:after
+		    	{
+		    		background-color: $main-color;
+		    	}
+		    	span
+		    	{
+		    		background-color: $text-color;
+		    	}
+		    }
+		    span
+		    {
+		    	background-color: $main-color2;
+			    display: inline-block;
+		    	width: 100%;
+			    height: 100%;
+			    line-height: 50px;
+			    color:$white-color;
+    			@include transition(background 0.2s ease);
+
+		    }
+		    &:after
+		    {
+		    	content: "\f04b";
+			    width: 50%;
+			    height: 100%;
+			    background-color: $white-color;
+			    margin-#{$left}: -5px;
+			    vertical-align: top;
+			    display: inline-block;
+			    font: normal normal normal 14px/1 FontAwesome;
+			    padding-top:15px;
+			    font-size: 24px;
+			    text-rendering: auto;
+			    -webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+    			@include transition(background 0.2s ease);        			
+		    }
+		}
+	}
+	.carousel-dota
+	{
+	    width: 24%;
+	    display: inline-block;
+	    height: 100%;
+	    vertical-align: top;
+	    position: relative;
+	}
+	.carousel-indicators
+	{
+		display: block;
+		margin:0;
+		padding-#{$left}:2em;
+		li
+		{
+			text-indent:0px;
+			padding: 0.5em 0;
+			width: auto;
+			height: auto;
+			background: none;
+			cursor: pointer;
+			color: $text-color;
+			letter-spacing: 5px;
+			&.active
+			{
+				background: none;
+			}
+			&:after,
+			&:before
+			{
+				display:none;
+				position: static;
+			}
+			&.active:after
+			{
+				display:inline-block;
+				background: none;
+				width: 20%;
+			    height: 2px;
+			    margin-#{$left}:20px;
+			    background-color: $text-color;
+			    vertical-align: middle;
+			}
+		}
+	}
+}
+//fixed media
+@include media($max_mid)
+{
+	.slider 
+	{
+		.carousel-indicators
+		{
+			padding:0;
+		}
+		position: static;
+		top:0;
+		height: 80%;
+		.carousel
+		{
+			width:100%;
+		}
+		figure,
+		.socal-links
+		{
+			width:100%;
+			height: 80%;
+		}
+		figcaption
+		{
+		    top: 10px;
+		    #{$left}: 10px;
+		}
+		.carousel-dota
+		{
+			text-align: center;
+			height:auto;
+			width:100%;
+			li
+			{
+				display: inline-block;
+				padding:10px;
+				&.active:after
+				{
+					display:none;
+				}
+				&.active
+				{
+					color: $main-color;
+				}
+			}
+		}
+		.socal-links
+		{
+			position: absolute;
+		    left: 0;
+		    top: 0;
+		    z-index: 99;
+		    right: 0;
+			.line,
+			&:after,
+			.list-group-item
+			{
+				display: none;
+			}
+			.btn
+			{
+			    bottom: -1px;
+				&:after
+				{
+					display: none;
+				}
+			}
+		}
+	}
+}
+//end slider

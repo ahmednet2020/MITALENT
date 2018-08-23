@@ -1,0 +1,16 @@
+// ========= toggle button =======
+button(class="navbar-toggler",
+		type="button",
+		data-toggle="show",
+		data-target="#navbar",
+		aria-controls="navbar",
+		aria-expanded="false",
+		aria-label="Toggle navigation"
+		)
+	span(class="toggler-icon")
+// ========= manu list =======
+div(class="navbar-collapse" id="navbar")
+	ul(class="navbar-nav mr-auto text-center" role="menu")
+		-for(let nav of navList)
+			li(class=`nav-item ${nav.active? nav.active:''}`)
+				a(class="nav-link" href=`${nav.href}` role="menuitem")= `${nav.title}`

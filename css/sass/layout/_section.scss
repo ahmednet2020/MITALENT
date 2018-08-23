@@ -1,0 +1,35 @@
+section
+{
+	.title-h
+	{
+	    border-bottom: 1px solid;
+	    padding-bottom: 1em;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.time
+	{
+		color:rgba($text-color,0.5);
+		margin-top: 10px;
+		display: inline-block;
+		text-transform: capitalize;
+		font-size: 0.8rem;
+		position: absolute;
+	    top: auto;
+	    bottom: 0;
+	    #{$left}: 0;
+	    #{$right}: 0;
+	}
+	.page-link
+	{
+		line-height: 1.5;
+		color: rgba($text-color,0.5);
+		background-color: transparent;
+		border: none;
+		&:hover
+		{
+			color:$text-color;
+			background-color: transparent;
+		}
+	}
+}

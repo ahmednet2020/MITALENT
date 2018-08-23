@@ -1,0 +1,38 @@
+//========== start slider========
+div(class="slider d-flex")
+	.container
+		div(class="carousel" id="slider-header")
+			each slider, i in sliderList
+				//========== start slider item ========
+				div(class=`carousel-item d-flex align-items-stretch ${i === 0? 'active':''}`)
+					div(class="socal-links" data-number=`0 ${i+1}`)
+						ul(class="list-group")
+							li(class="list-group-item")
+								a(href="#!" aria-label="facebook")
+									<i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+							li(class="list-group-item")
+								a(href="#!" aria-label="twitter")
+									<i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>
+							li(class="list-group-item")
+								a(href="#!" aria-label="instagram")
+									<i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+							li(class="list-group-item")
+								a(href="#!" aria-label="youtube")
+									<i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i>
+						.line
+						a(class="btn text-uppercase" href=`${slider.id}`)
+							span view profile
+					figure
+						img(src=`${slider.img}` title=`${slider.name}` alt=`${slider.job}`)/
+						figcaption
+							h2!= `${slider.name}`
+							p= `${slider.job}`
+				// ========== end slider item========
+		// ========== slider button ========
+		div(class="carousel-dota")
+			ol(class="carousel-indicators h-style")
+				each slider, i in sliderList
+					li(data-target="#slider-header",
+						data-slide-to=`${i}`,
+						class=`${i === 0? 'active':''}`)= `0${i+1}`
+//========== end slider========

@@ -1,0 +1,33 @@
+/*======================
+====== start buttons style =======
+======================*/
+.btn-primary
+{
+	color: $white-color;
+    background-color: $main-color2;
+    border:none;
+    @include transition(background 0.2s ease);
+    &:hover
+    {
+    	background-color: $text-color;
+    }
+}
+.btn-post
+{
+	position: absolute;
+	bottom: 0;
+	#{$right}: 0;
+	background-color: $white-color;
+	color:$text-color;
+	padding: 1em;
+	width: 35%;
+	text-transform: uppercase;
+	@include border-radius(0);
+	&:hover
+	{
+    	background-color: $main-color2;
+	}
+}
+/*======================
+====== end buttons style =======
+======================*/

@@ -1,0 +1,55 @@
+/*=== start default style */
+*,
+*::before,
+*::after
+{
+    border: 0;
+    outline: 0;
+    margin:0;
+    padding:0;
+    @include box-sizing();
+}
+img
+{
+    max-width: 100%;
+    width:100%;
+    height: 100%;
+    vertical-align: middle;
+}
+button
+{
+    cursor: pointer;
+    display:block;
+    background: none;
+}
+a,a:hover
+{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+dl, ol, ul
+{
+    margin: 0;
+    list-style:none;
+}
+form
+{
+     overflow: hidden;
+}
+span
+{
+    vertical-align: middle;
+}
+figure
+{
+    position: relative;
+    height: 100%;
+}
+.container-fluid
+{
+    position:relative;
+    margin:0;
+    padding:0;
+}
+/*=== end default style */

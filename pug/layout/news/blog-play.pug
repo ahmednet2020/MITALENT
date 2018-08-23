@@ -1,0 +1,12 @@
+// start blog play
+div(class="blog-play")
+	figure
+		img(class="d-block",
+			src=`${play.img}`,
+			alt=`${play.title}`,
+			title=`${play.title}`)/
+		figcaption
+			a(href=`${play.id}`, class="play-blog")
+				<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+				|  play all
+// end blog play

@@ -1,0 +1,15 @@
+{
+  "short_name": "MITALENT",
+  "name": "MITALENT-Template",
+  "icons": [
+  	 {
+      "src": "./icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#c3dbdb",
+  "background_color": "#ffffff"
+}

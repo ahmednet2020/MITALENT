@@ -56,16 +56,16 @@ $(function (){
 		$(this).addClass('active').siblings().removeClass('active');
 	});
 	//loop animation auto run slider
-	carouselIndicators.each(function (i,e) {
-		setInterval(function() {
-			if($(e).find('li.active').next('li').length === 0)
-			{
-				$(e).find('li:first-child').click();
-			} else {
-				$(e).find('li.active').next('li').click();
-			}
-		}, 5000)
-	});
+	// carouselIndicators.each(function (i,e) {
+	// 	setInterval(function() {
+	// 		if($(e).find('li.active').next('li').length === 0)
+	// 		{
+	// 			$(e).find('li:first-child').click();
+	// 		} else {
+	// 			$(e).find('li.active').next('li').click();
+	// 		}
+	// 	}, 5000)
+	// });
 
 	//search form
 	search.on('click', 'label', function(event) {

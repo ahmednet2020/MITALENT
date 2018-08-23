@@ -1,0 +1,6 @@
+// ========= manu item in big screen =======
+div(class="navbar-items d-none  d-md-flex")
+	ul(class="navbar-nav flex-row" role="menu")
+		-for(let nav of navItems)
+			li(class="nav-item")
+				a(class="nav-link" href=`${nav.href}` role="menuitem")= `${nav.title}`

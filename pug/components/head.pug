@@ -1,0 +1,28 @@
+// meta character set
+meta(charset="utf-8")
+//  Always force latest IE rendering engine or request Chrome Frame
+meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+//  Mobile Specific Meta
+meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+meta(name="theme-color" content=`${themeColor}`)
+// 
+  manifest.json provides metadata used when your web app is added to the
+  homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+link(rel="manifest" href="./manifest.json")
+link(rel="icon" href=`${icon}`)
+//  Site Title
+title= `${title}`
+//  Meta Description
+meta(name="description" content=`${description}`)
+//  Meta Keyword
+meta(name="keyword" content=`${keyword}`)
+// fonts link
+//- fonts loop from var 
+- for(let font of fonts)
+    != `<!--=======================${font.comment}=====================-->`
+    link(href=`${font.href}` rel="stylesheet")
+// css style link
+//- css loop from var 
+- for(let css of globalStyle)
+    != `<!--=======================${css.comment}=====================-->`
+    link(rel="stylesheet" type="text/css" href=`${css.href}`)

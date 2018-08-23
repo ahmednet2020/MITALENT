@@ -55,7 +55,8 @@ nav
         color: rgba($text-color,0.5);
         @include transition(color 0.2s ease);
         @extend %fontheading;
-        &:hover
+        &:hover,
+        &.active
         {
             color: $text-color;
         }

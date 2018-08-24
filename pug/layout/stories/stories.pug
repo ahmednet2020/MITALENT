@@ -1,0 +1,12 @@
+// ===== start stories=========
+section(class="stories pt-5 pb-5")
+	.container
+		h2(class="title-h mb-5") our stories
+		// ======== start stories grid =======
+		div(class="row")
+			-for(let i=0;i<=2; i++)
+				div(class="col-12 col-md-6 col-lg-4")
+					- let stories = storiesList[i]
+						include stories-item
+		// ======== end stories grid =======
+// ===== end stories=========

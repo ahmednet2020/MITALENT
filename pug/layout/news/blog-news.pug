@@ -1,0 +1,27 @@
+// ===== start news=========
+section(class="news pt-5 pb-5")
+	div(class="row m-0")
+		div(class='col-12 col-md-6')
+		div(class='col-12 col-md-6')
+			.container
+				div(class="row")
+					div(class="col-12")
+						- let news = Object.assign({},newsList[0]);
+						- news.trend = 'trend'
+						include news-blog
+					-for(let i = 0; i<= 3; i++)
+						- let news = newsList[i]
+						div(class="col-12 col-lg-6 pt-4")
+							include news-blog
+				// start post arrow 
+				div(class='pt-4 pb-4' aria-label="Page navigation")
+					ul(class="pagination justify-content-between h-style")
+						li(class="page-item")
+							a(class="page-link" href="#" tabindex="-1")
+								<i class="fa fa-long-arrow-left mr-3" aria-hidden="true"></i>
+								| pre post
+						li(class="page-item")
+							a(class="page-link" href="#") next post
+								<i class="fa fa-long-arrow-right ml-3" aria-hidden="true"></i>
+				// end post arrow 
+// ===== end news=========

@@ -1,0 +1,16 @@
+// ===== start news=========
+section(class="news pt-5 pb-5")
+	.container
+		div(class="row")
+			div(class="col-12 col-lg-8")
+				- let trending = newsList[3]
+					include trending
+				div(class="row")
+					div(class="col-12 col-lg-6 mt-4")
+						- let news = newsList[0]
+						include news-blog
+					div(class="col-12 col-lg-6 mt-4")
+						include blog-play
+			div(class="col-12 col-lg-4")
+				include news-slider
+// ===== end news=========

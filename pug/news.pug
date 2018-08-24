@@ -1,23 +1,10 @@
-include components/var
-doctype html
-html(lang="en")
-	head
-		include components/head
-		// index style
-		link(rel="stylesheet" type="text/css" href="css/news.css")
-	body
-		include components/preload
-		// =======================
-			start container
-			======================
-		.container-fluid
-			// message for old browser
-			div(class="alert alert-danger m-0" id="alert" role="alert" style="display: none;")
-				| your browser is old
+extends layout
 
-			include layout/header
-			include components/footer
-		// =======================
-			end container
-			======================
-		include components/script
+block style
+	// news style
+	link(rel="stylesheet" type="text/css" href="css/news.css")
+
+block content
+	include layout/header-news
+	include layout/main-news
+	include layout/footer

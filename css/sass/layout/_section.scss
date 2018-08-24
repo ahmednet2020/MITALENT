@@ -7,7 +7,7 @@ section
 	    text-align: center;
 	    display: inline-block;
 	}
-	.time
+	@at-root .time
 	{
 		color:rgba($text-color,0.5);
 		margin-top: 10px;

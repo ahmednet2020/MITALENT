@@ -12,5 +12,5 @@ button(class="navbar-toggler",
 div(class="navbar-collapse" id="navbar")
 	ul(class="navbar-nav mr-auto text-center" role="menu")
 		-for(let nav of navList)
-			li(class=`nav-item ${nav.active? nav.active:''}`)
+			li(class=`nav-item ${nav.title === navActive? 'active':''}`)
 				a(class="nav-link" href=`${nav.href}` role="menuitem")= `${nav.title}`

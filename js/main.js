@@ -88,7 +88,7 @@ $(function (){
 	//carouselControl
 	carouselControl.on('click', 'a', function(event) {
 		event.preventDefault();
-		$($(this).attr('data-target')).find('.carousel-item.active')[$(this).attr('data-slide')](".carousel-item")
+		$($(this).attr('href')).find('.carousel-item.active')[$(this).attr('data-slide')](".carousel-item")
 			.addClass('active').siblings().removeClass('active');
 	});
 });

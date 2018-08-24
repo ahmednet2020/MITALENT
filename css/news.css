@@ -366,8 +366,8 @@ nav .navbar-collapse .nav-item {
 ======================*/
 header {
   position: relative;
-  min-height: 600px;
-  height: 600px;
+  min-height: 700px;
+  height: 700px;
   height: 100vh;
   background-color: #fff;
   overflow: hidden;
@@ -407,7 +407,7 @@ section .title-h {
   text-align: center;
   display: inline-block;
 }
-section .time {
+.time {
   color: rgba(26, 26, 29, 0.5);
   margin-top: 10px;
   display: inline-block;
@@ -419,6 +419,7 @@ section .time {
   left: 0;
   right: 0;
 }
+
 section .page-link {
   line-height: 1.5;
   color: rgba(26, 26, 29, 0.5);
@@ -489,8 +490,8 @@ section .page-link:hover {
 .news {
   height: 100%;
 }
-.news .up {
-  margin-top: -120px;
+.news .down {
+  margin-bottom: -120px;
 }
 .news .trend:before {
   content: "trending";
@@ -540,7 +541,6 @@ section .page-link:hover {
   padding: 1em;
 }
 .news .carousel,
-.news .blog-play,
 .news .carousel-inner {
   height: 100%;
 }
@@ -635,18 +635,23 @@ section .page-link:hover {
 .news #news-slider figcaption {
   height: 15%;
 }
-.news #blog-slider .carousel-indicators,
+.news #blog-play {
+  min-height: 400px;
+  height: 400px;
+  height: 100%;
+}
+.news #blog-play .carousel-indicators,
 .news #post-slider .carousel-indicators {
   height: 100%;
   top: 0;
   bottom: 0;
   left: auto;
 }
-.news #blog-slider img,
+.news #blog-play img,
 .news #post-slider img {
   height: 100%;
 }
-.news #blog-slider figcaption,
+.news #blog-play figcaption,
 .news #post-slider figcaption {
   position: absolute;
   color: rgba(255, 255, 255, 0.7);
@@ -848,6 +853,7 @@ section .page-link:hover {
 ======================*/
 nav {
   height: auto;
+  width: 100%;
 }
 nav .navbar-collapse {
   right: 2em;

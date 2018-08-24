@@ -68,14 +68,14 @@
 		{
 			display: block;
 		    width: 2px;
-		    height: 15%;
+		    height: 10%;
 		    background-color: $text-color;
-		    margin: 2em 1.5em;
+		    margin: 1em 1.5em;
 		}
 		&:after
 		{
 			content: attr(data-number);
-		    padding: 0.5em 1em;
+		    padding: 0em 1em;
 		    display: inline-block;
 		    @include rotate(-90deg);
 		    @extend %fontheading; 

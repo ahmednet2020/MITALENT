@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta character set-->
+    <meta charset="utf-8">
+    <!--  Always force latest IE rendering engine or request Chrome Frame-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--  Mobile Specific Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#39b3f1">
+    <!--  manifest.json provides metadata used when your web app is added to thehomescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" href="icon-192.png">
+    <!--  Site Title-->
+    <title>Mitalent</title>
+    <!--  Meta Description-->
+    <meta name="description" content="description">
+    <!--  Meta Keyword-->
+    <meta name="keyword" content="keyword">
+    <!-- fonts link--><!--=======================google fonts api=====================-->
+    <link href="https://fonts.googleapis.com/css?family=Amaranth:700|Raleway" rel="stylesheet">
+    <!-- css style link--><!--=======================bootstrap v4=====================-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- page style--><!--=======================font-awesome  v4.7=====================-->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- page style-->
+    <!-- news style-->
+    <link rel="stylesheet" type="text/css" href="css/news.css">
+  </head>
+  <body>
+    <!-- =======================
+    start preload
+    ======================
+    -->
+    <div class="preload">
+      <div class="preload-block"><span class="preload-circal"></span><span class="preload-circal"></span><span class="preload-circal"></span>
+      </div>
+    </div>
+    <!--	=======================
+    	end preload
+    ======================
+    -->
+    <!-- =======================
+    start container
+    ======================
+    -->
+    <div class="container-fluid">
+      <!-- message for old browser-->
+      <div class="alert alert-danger m-0" id="alert" role="alert" style="display: none;">your browser is old</div>
+      <!-- =======================
+      	start header
+      ======================
+      -->
+      <header>
+        <div class="row h-100">
+          <div class="col-12 col-lg-6  d-none d-lg-block">
+            <div class="news">
+              <!-- start post-slider-->
+              <div class="carousel slide" id="post-slider" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <figure><img src="./img/slider-1.jpg" alt="5 reasons to keep your beauty salon reservation" title="5 reasons to keep your beauty salon reservation"/>
+                      <figcaption>
+                        <h3>5 reasons to keep your beauty salon reservation</h3>
+                      </figcaption>
+                    </figure>
+                    <button class="btn btn-post h-style">
+                      read more<i class="fa fa-arrow-right ml-3" aria-hidden="true"></i></button>
+                  </div>
+                  <div class="carousel-item">
+                    <figure><img src="./img/slider-2.jpg" alt="benjamin franklin method of habit formation" title="benjamin franklin method of habit formation"/>
+                      <figcaption>
+                        <h3>benjamin franklin method of habit formation</h3>
+                      </figcaption>
+                    </figure>
+                    <button class="btn btn-post h-style">
+                      read more<i class="fa fa-arrow-right ml-3" aria-hidden="true"></i></button>
+                  </div>
+                  <div class="carousel-item">
+                    <figure><img src="./img/slider-4.jpg" alt="29 mativational quotes for business" title="29 mativational quotes for business"/>
+                      <figcaption>
+                        <h3>29 mativational quotes for business</h3>
+                      </figcaption>
+                    </figure>
+                    <button class="btn btn-post h-style">
+                      read more<i class="fa fa-arrow-right ml-3" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+                <div class="carousel-control"><a class="carousel-control-prev" href="#post-slider" role="button" data-slide="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#post-slider" role="button" data-slide="next"><i class="fa fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next</span></a></div>
+              </div>
+              <!-- end post-slider-->
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="container">
+              <!-- ========== start nav========-->
+              <nav class="navbar align-items-center mb-4">
+                <!-- =====navbar brand=======--><a class="navbar-brand" href="/">
+                  <h1>mitalent</h1></a>
+                <!-- search form-->
+                <form id="search">
+                  <input type="text" name="search" value="" placeholder="search..." id="searchInput"/>
+                  <label for="searchInput" aria-label="search"><i class="fa fa-search" aria-hidden="true"></i></label>
+                </form>
+                <!-- ========= toggle button =======-->
+                <button class="navbar-toggler" type="button" data-toggle="show" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="toggler-icon"></span></button>
+                <!-- ========= manu list =======-->
+                <div class="navbar-collapse" id="navbar">
+                  <ul class="navbar-nav mr-auto text-center" role="menu">
+                    <li class="nav-item "><a class="nav-link" href="index.html" role="menuitem">home</a></li>
+                    <li class="nav-item "><a class="nav-link" href="about.html" role="menuitem">about</a></li>
+                    <li class="nav-item "><a class="nav-link" href="clients.html" role="menuitem">clients</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="news.html" role="menuitem">news</a></li>
+                    <li class="nav-item "><a class="nav-link" href="profile.html" role="menuitem">profile</a></li>
+                    <li class="nav-item "><a class="nav-link" href="blog.html" role="menuitem">blog</a></li>
+                    <li class="nav-item "><a class="nav-link" href="contact.html" role="menuitem">contact</a></li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- ========== end nav========-->
+              <div class="row m-0">
+                <div class="col-12 col-xl-6 d-none d-xl-block">
+                  <div class="news">
+                    <!-- start news slider-->
+                    <div class="carousel pb-3" id="news-slider" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li class="active" data-target="#news-slider" data-slide-to="0"></li>
+                        <li data-target="#news-slider" data-slide-to="1"></li>
+                        <li data-target="#news-slider" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <!-- ====== start news blog-->
+                          <div class="news-blog ">
+                            <figure><img class="d-block" src="./img/slider-1.jpg" alt="5 reasons to keep your beauty salon reservation" title="5 reasons to keep your beauty salon reservation">
+                              <figcaption>
+                                <h4>5 reasons to keep your beauty salon reservation</h4>
+                                <time class="time" datetime="2020-07-08">8 march, 2020</time>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <!-- ====== end news blog-->
+                        </div>
+                        <div class="carousel-item">
+                          <!-- ====== start news blog-->
+                          <div class="news-blog ">
+                            <figure><img class="d-block" src="./img/slider-2.jpg" alt="benjamin franklin method of habit formation" title="benjamin franklin method of habit formation">
+                              <figcaption>
+                                <h4>benjamin franklin method of habit formation</h4>
+                                <time class="time" datetime="2020-07-08">8 march, 2023</time>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <!-- ====== end news blog-->
+                        </div>
+                        <div class="carousel-item">
+                          <!-- ====== start news blog-->
+                          <div class="news-blog ">
+                            <figure><img class="d-block" src="./img/slider-4.jpg" alt="29 mativational quotes for business" title="29 mativational quotes for business">
+                              <figcaption>
+                                <h4>29 mativational quotes for business</h4>
+                                <time class="time" datetime="2020-07-08">8 march, 2022</time>
+                              </figcaption>
+                            </figure>
+                          </div>
+                          <!-- ====== end news blog-->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end news slider-->
+                  </div>
+                </div>
+                <div class="col-12 col-xl-6">
+                  <div class="stories">
+                    <!-- start stories item--><a class="media" href="#!">
+                      <figure class="mr-3"><img src="./img/slider-1.jpg" alt="5 reasons to keep your beauty salon reservation" title="5 reasons to keep your beauty salon reservation">
+                        <figcaption class="d-flex align-items-center justify-content-center"><i class="fa fa-play" aria-hidden="true"></i></figcaption>
+                      </figure>
+                      <div class="media-body text-left">
+                        <h3 class="mt-0">5 reasons to keep your beauty salon reservation</h3>
+                        <time class="time" datetime="2020-07-08">8 march, 2020</time>
+                      </div></a>
+                    <!-- end stories item-->
+                    <!-- start stories item--><a class="media" href="#!">
+                      <figure class="mr-3"><img src="./img/slider-2.jpg" alt="benjamin franklin method of habit formation" title="benjamin franklin method of habit formation">
+                        <figcaption class="d-flex align-items-center justify-content-center"><i class="fa fa-play" aria-hidden="true"></i></figcaption>
+                      </figure>
+                      <div class="media-body text-left">
+                        <h3 class="mt-0">benjamin franklin method of habit formation</h3>
+                        <time class="time" datetime="2020-07-08">8 march, 2023</time>
+                      </div></a>
+                    <!-- end stories item-->
+                    <!-- start stories item--><a class="media" href="#!">
+                      <figure class="mr-3"><img src="./img/slider-3.jpg" alt="29 mativational quotes for business" title="29 mativational quotes for business">
+                        <figcaption class="d-flex align-items-center justify-content-center"><i class="fa fa-play" aria-hidden="true"></i></figcaption>
+                      </figure>
+                      <div class="media-body text-left">
+                        <h3 class="mt-0">29 mativational quotes for business</h3>
+                        <time class="time" datetime="2020-07-08">8 march, 2022</time>
+                      </div></a>
+                    <!-- end stories item-->
+                    <!-- start stories item--><a class="media" href="#!">
+                      <figure class="mr-3"><img src="./img/slider-4.jpg" alt="29 mativational quotes for business" title="29 mativational quotes for business">
+                        <figcaption class="d-flex align-items-center justify-content-center"><i class="fa fa-play" aria-hidden="true"></i></figcaption>
+                      </figure>
+                      <div class="media-body text-left">
+                        <h3 class="mt-0">29 mativational quotes for business</h3>
+                        <time class="time" datetime="2020-07-08">8 march, 2022</time>
+                      </div></a>
+                    <!-- end stories item-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- =======================
+      	end header
+      ======================
+      -->
+      <!-- =======================
+      	start main
+      ======================
+      -->
+      <main>
+        <!-- ===== start news=========-->
+        <section class="news pt-5 pb-5">
+          <div class="row m-0">
+            <div class="col-12 col-md-6"></div>
+            <div class="col-12 col-md-6">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <!-- ====== start news blog-->
+                    <div class="news-blog trend">
+                      <figure><img class="d-block" src="./img/slider-1.jpg" alt="5 reasons to keep your beauty salon reservation" title="5 reasons to keep your beauty salon reservation">
+                        <figcaption>
+                          <h4>5 reasons to keep your beauty salon reservation</h4>
+                          <time class="time" datetime="2020-07-08">8 march, 2020</time>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- ====== end news blog-->
+                  </div>
+                  <div class="col-12 col-lg-6 pt-4">
+                    <!-- ====== start news blog-->
+                    <div class="news-blog ">
+                      <figure><img class="d-block" src="./img/slider-1.jpg" alt="5 reasons to keep your beauty salon reservation" title="5 reasons to keep your beauty salon reservation">
+                        <figcaption>
+                          <h4>5 reasons to keep your beauty salon reservation</h4>
+                          <time class="time" datetime="2020-07-08">8 march, 2020</time>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- ====== end news blog-->
+                  </div>
+                  <div class="col-12 col-lg-6 pt-4">
+                    <!-- ====== start news blog-->
+                    <div class="news-blog ">
+                      <figure><img class="d-block" src="./img/slider-2.jpg" alt="benjamin franklin method of habit formation" title="benjamin franklin method of habit formation">
+                        <figcaption>
+                          <h4>benjamin franklin method of habit formation</h4>
+                          <time class="time" datetime="2020-07-08">8 march, 2023</time>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- ====== end news blog-->
+                  </div>
+                  <div class="col-12 col-lg-6 pt-4">
+                    <!-- ====== start news blog-->
+                    <div class="news-blog ">
+                      <figure><img class="d-block" src="./img/slider-4.jpg" alt="29 mativational quotes for business" title="29 mativational quotes for business">
+                        <figcaption>
+                          <h4>29 mativational quotes for business</h4>
+                          <time class="time" datetime="2020-07-08">8 march, 2022</time>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- ====== end news blog-->
+                  </div>
+                  <div class="col-12 col-lg-6 pt-4">
+                    <!-- ====== start news blog-->
+                    <div class="news-blog ">
+                      <figure><img class="d-block" src="./img/slider-3.jpg" alt="29 mativational quotes for business" title="29 mativational quotes for business">
+                        <figcaption>
+                          <h4>29 mativational quotes for business</h4>
+                          <time class="time" datetime="2020-07-08">8 march, 2022</time>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- ====== end news blog-->
+                  </div>
+                </div>
+                <!-- start post arrow -->
+                <div class="pt-4 pb-4" aria-label="Page navigation">
+                  <ul class="pagination justify-content-between h-style">
+                    <li class="page-item"><a class="page-link" href="#" tabindex="-1">
+                        <i class="fa fa-long-arrow-left mr-3" aria-hidden="true"></i>pre post</a></li>
+                    <li class="page-item"><a class="page-link" href="#">
+                        next post<i class="fa fa-long-arrow-right ml-3" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
+                <!-- end post arrow -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ===== end news=========-->
+        <!-- ===== start clients=========-->
+        <section class="clients pt-5 pb-5">
+          <div class="container">
+            <div class="row m-0">
+              <div class="col-12 col-md-6">
+                <h2 class="title-h">our clients</h2>
+              </div>
+              <div class="col-12 col-md-6">
+                <p class="pl-3 pr-3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, id sequi excepturi quis maiores voluptatibus harum saepe cum repellat odio! Earum voluptate, nisi maiores! Dolorem, ullam vitae quas provident reprehenderit!</p><a class="page-link h-style mt-3" href="#">
+                  explore more<i class="fa fa-long-arrow-right ml-3" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <div class="carousel clients-slider mt-4" id="clients-slider" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row m-0">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                      <!-- start client-->
+                      <div class="client" data-filter="comdian">
+                        <figure><img src="./img/slider-1.jpg" alt="keith ruiz" title="comdian"/>
+                          <figcaption><a class="client-link" href="#!" aria-label="client-profile"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="client-title">
+                              <h4>keith ruiz</h4><span>comdian</span>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!-- end client-->
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                      <!-- start client-->
+                      <div class="client" data-filter="actor">
+                        <figure><img src="./img/slider-2.jpg" alt="ahmed ruiz" title="actor"/>
+                          <figcaption><a class="client-link" href="#!" aria-label="client-profile"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="client-title">
+                              <h4>ahmed ruiz</h4><span>actor</span>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!-- end client-->
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                      <!-- start client-->
+                      <div class="client" data-filter="musician">
+                        <figure><img src="./img/slider-3.jpg" alt="super ahmed" title="musician"/>
+                          <figcaption><a class="client-link" href="#!" aria-label="client-profile"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="client-title">
+                              <h4>super ahmed</h4><span>musician</span>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!-- end client-->
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                      <!-- start client-->
+                      <div class="client" data-filter="model">
+                        <figure><img src="./img/slider-4.jpg" alt="super hero" title="model"/>
+                          <figcaption><a class="client-link" href="#!" aria-label="client-profile"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="client-title">
+                              <h4>super hero</h4><span>model</span>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!-- end client-->
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row m-0">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                      <!-- start client-->
+                      <div class="client" data-filter="comdian">
+                        <figure><img src="./img/slider-1.jpg" alt="keith ruiz" title="comdian"/>
+                          <figcaption><a class="client-link" href="#!" aria-label="client-profile"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="client-title">
+                              <h4>keith ruiz</h4><span>comdian</span>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!-- end client-->
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                      <!-- start client-->
+                      <div class="client" data-filter="actor">
+                        <figure><img src="./img/slider-2.jpg" alt="ahmed ruiz" title="actor"/>
+                          <figcaption><a class="client-link" href="#!" aria-label="client-profile"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="client-title">
+                              <h4>ahmed ruiz</h4><span>actor</span>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!-- end client-->
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                      <!-- start client-->
+                      <div class="client" data-filter="musician">
+                        <figure><img src="./img/slider-3.jpg" alt="super ahmed" title="musician"/>
+                          <figcaption><a class="client-link" href="#!" aria-label="client-profile"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="client-title">
+                              <h4>super ahmed</h4><span>musician</span>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!-- end client-->
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                      <!-- start client-->
+                      <div class="client" data-filter="model">
+                        <figure><img src="./img/slider-4.jpg" alt="super hero" title="model"/>
+                          <figcaption><a class="client-link" href="#!" aria-label="client-profile"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="client-title">
+                              <h4>super hero</h4><span>model</span>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!-- end client-->
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row m-0">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                      <!-- start client-->
+                      <div class="client" data-filter="model">
+                        <figure><img src="./img/slider-4.jpg" alt="super heros" title="model"/>
+                          <figcaption><a class="client-link" href="#!" aria-label="client-profile"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <div class="client-title">
+                              <h4>super heros</h4><span>model</span>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!-- end client-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ol class="carousel-indicators mt-5">
+                <li class="active" data-target="#clients-slider" data-slide-to="0"></li>
+                <li data-target="#clients-slider" data-slide-to="1"></li>
+                <li data-target="#clients-slider" data-slide-to="2"></li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <!-- ===== end clients=========-->
+      </main>
+      <!-- =======================
+      	end main
+      ======================
+      -->
+      <!-- =======================
+      	start footer
+      ======================
+      -->
+      <footer class="pt-5">
+        <div class="container">
+          <!-- news letter-->
+          <div class="row pt-3 pb-3">
+            <div class="col-12 col-md-6"><a class="footer-brand h-style" href="#">Mitalent</a></div>
+            <div class="col-12 col-md-6">
+              <button class="news-letter" type="button"><span class="letter-span">sign up our newsletter</span><i class="fa fa-envelope-o ml-3" aria-hidden="true"></i></button>
+            </div>
+          </div>
+          <!-- news copy & links-->
+          <div class="row pt-3 pb-3 copy-links">
+            <div class="col-12 col-md-6">
+              <p class="copy-right">&copy; 2018 mi talent coding by ahmednet</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <ul class="list-inline links">
+                <li class="list-inline-item"><a href="#!" aria-label="facebook"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item"><a href="#!" aria-label="twitter"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item"><a href="#!" aria-label="instagram"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item"><a href="#!" aria-label="youtube"><i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- =======================
+      	end footer
+      ======================
+      -->
+    </div>
+    <!-- =======================
+    end container
+    ======================
+    -->
+    <!-- start script tage-->
+    <!-- modernizr flex box check--><script>!function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,i,s,l;for(var u in g)if(g.hasOwnProperty(u)){if(e=[],n=g[u],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)s=e[i],l=s.split("."),1===l.length?Modernizr[l[0]]=o:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=o),S.push((o?"":"no-")+l.join("-"))}}function i(e,n){return!!~(""+e).indexOf(n)}function s(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function l(e,n){return function(){return e.apply(n,arguments)}}function u(e,n,t){var o;for(var i in e)if(e[i]in n)return t===!1?e[i]:(o=n[e[i]],r(o,"function")?l(o,t||n):o);return!1}function a(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function f(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var i=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(i){var s=i.error?"error":"log";i[s].call(i,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function d(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):z?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function p(){var e=n.body;return e||(e=d(z?"svg":"body"),e.fake=!0),e}function c(e,t,r,o){var i,s,l,u,a="modernizr",f=d("div"),c=p();if(parseInt(r,10))for(;r--;)l=d("div"),l.id=o?o[r]:a+(r+1),f.appendChild(l);return i=d("style"),i.type="text/css",i.id="s"+a,(c.fake?c:f).appendChild(i),c.appendChild(f),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),f.id=a,c.fake&&(c.style.background="",c.style.overflow="hidden",u=b.style.overflow,b.style.overflow="hidden",b.appendChild(c)),s=t(f,e),c.fake?(c.parentNode.removeChild(c),b.style.overflow=u,b.offsetHeight):f.parentNode.removeChild(f),!!s}function m(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(a(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];o--;)i.push("("+a(n[o])+":"+r+")");return i=i.join(" or "),c("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==f(e,null,"position")})}return t}function y(e,n,o,l){function u(){f&&(delete E.style,delete E.modElem)}if(l=r(l,"undefined")?!1:l,!r(o,"undefined")){var a=m(e,o);if(!r(a,"undefined"))return a}for(var f,p,c,y,h,v=["modernizr","tspan","samp"];!E.style&&v.length;)f=!0,E.modElem=d(v.shift()),E.style=E.modElem.style;for(c=e.length,p=0;c>p;p++)if(y=e[p],h=E.style[y],i(y,"-")&&(y=s(y)),E.style[y]!==t){if(l||r(o,"undefined"))return u(),"pfx"==n?y:!0;try{E.style[y]=o}catch(g){}if(E.style[y]!=h)return u(),"pfx"==n?y:!0}return u(),!1}function h(e,n,t,o,i){var s=e.charAt(0).toUpperCase()+e.slice(1),l=(e+" "+x.join(s+" ")+s).split(" ");return r(n,"string")||r(n,"undefined")?y(l,n,o,i):(l=(e+" "+_.join(s+" ")+s).split(" "),u(l,n,t))}function v(e,n,r){return h(e,t,t,n,r)}var g=[],C={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){g.push({name:e,fn:n,options:t})},addAsyncTest:function(e){g.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr;var S=[],w="Moz O ms Webkit",x=C._config.usePrefixes?w.split(" "):[];C._cssomPrefixes=x;var _=C._config.usePrefixes?w.toLowerCase().split(" "):[];C._domPrefixes=_;var b=n.documentElement,z="svg"===b.nodeName.toLowerCase(),P={elem:d("modernizr")};Modernizr._q.push(function(){delete P.elem});var E={style:P.elem.style};Modernizr._q.unshift(function(){delete E.style}),C.testAllProps=h,C.testAllProps=v,Modernizr.addTest("flexbox",v("flexBasis","1px",!0)),o(),delete C.addTest,delete C.addAsyncTest;for(var T=0;T<Modernizr._q.length;T++)Modernizr._q[T]();e.Modernizr=Modernizr}(window,document);</script>
+<script>if(!Modernizr.flexbox){document.getElementById("alert").style.display = "block"}</script>
+    <!-- jquery v1.11-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- end script tage-->
+  </body>
+</html>

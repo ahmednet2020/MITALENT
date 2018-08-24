@@ -1,0 +1,19 @@
+include components/var
+doctype html
+html(lang="en")
+	include components/head
+	body
+		include components/preload
+		// =======================
+			start container
+			======================
+		.container-fluid
+			// message for old browser
+			div(class="alert alert-danger m-0" id="alert" role="alert" style="display: none;")
+				| your browser is old
+
+			block content
+		// =======================
+			end container
+			======================
+		include components/script

@@ -1,5 +1,5 @@
 // ====== start news blog
-div(class="news-blog")
+div(class=`news-blog ${news.trend? news.trend:''}`)
 	figure
 		img(class="d-block",
 			src=`${news.img}`,

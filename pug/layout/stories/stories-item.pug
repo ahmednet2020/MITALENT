@@ -1,0 +1,12 @@
+// start stories item
+a(class="media" href=`${stories.id}`)
+	figure(class="mr-3")
+		img(src=`${stories.img}`,
+			alt=`${stories.title}`,
+			title=`${stories.title}`)
+		figcaption(class="d-flex align-items-center justify-content-center")
+			<i class="fa fa-play" aria-hidden="true"></i>
+	div(class="media-body text-left")
+		h3(class="mt-0")= `${stories.title}`
+		time(class="time" datetime="2020-07-08")= `${stories.time}`
+// end stories item

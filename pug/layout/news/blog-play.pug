@@ -1,12 +1,20 @@
 // start blog play
-div(class="blog-play")
-	figure
-		img(class="d-block",
-			src=`${play.img}`,
-			alt=`${play.title}`,
-			title=`${play.title}`)/
-		figcaption
-			a(href=`${play.id}`, class="play-blog")
-				<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-				|  play all
+div(id="blog-play" class="carousel pb-3" data-ride="carousel")
+	ol(class="carousel-indicators flex-column")
+		li(data-target="#blog-play" data-slide-to="0" class="active")
+		li(data-target="#blog-play" data-slide-to="1")
+		li(data-target="#blog-play" data-slide-to="2")
+	div(class="carousel-inner")
+		- for(let i = 0; i<=2; i++)
+			- let play = newsList[i]
+			div(class=`carousel-item${i === 0? ' active':''}`)
+				figure
+					img(class="d-block",
+						src=`${play.img}`,
+						alt=`${play.title}`,
+						title=`${play.title}`)/
+					figcaption
+						a(href=`${play.id}`, class="play-blog")
+							<i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
+							|  play all
 // end blog play

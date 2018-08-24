@@ -1,0 +1,28 @@
+// ===== start clients=========
+section(class="clients pt-5 pb-5")
+	.container
+		div(class='row m-0')
+			div(class='col-12 col-md-6')
+				h2.title-h our clients
+			div(class='col-12 col-md-6')
+				p(class='pl-3 pr-3')  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, id sequi excepturi quis maiores voluptatibus harum saepe cum repellat odio! Earum voluptate, nisi maiores! Dolorem, ullam vitae quas provident reprehenderit!
+				a(class="page-link h-style mt-3" href="#") explore more
+					<i class="fa fa-long-arrow-right ml-3" aria-hidden="true"></i>
+		div(id="clients-slider" class="carousel clients-slider mt-4" data-ride="carousel")
+			- let clinetRow = Math.ceil(clients.length/4)
+				div(class="carousel-inner")
+					- for (let i = 1; i <= clinetRow; i++)
+						div(class=`carousel-item${i === 1 ?  ' active': ''}`)
+							div(class='row m-0')
+								-let x = ((i - 1) * 4) + 1
+								-for(let z = x;z<=x+3; z++)
+									-let client = clients[z-1]
+										-if(client)
+											div(class='col-12 col-md-6 col-lg-4 col-xl-3')
+												include client
+				ol(class="carousel-indicators mt-5")
+					-for(let i = 1; i<=clinetRow; i++)
+						li(data-target="#clients-slider",
+							data-slide-to=`${i-1}`,
+							class=`${i === 1? 'active':''}`)
+// ===== end clients=========

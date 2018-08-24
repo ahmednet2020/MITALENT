@@ -1,0 +1,24 @@
+// =======================
+		start header
+	======================
+header
+	div(class='row h-100')
+		div(class="col-12 col-lg-6  d-none d-lg-block")
+			div(class='news')
+				include news/post-slider
+		div(class="col-12 col-lg-6")
+			.container
+				include nav/nav-news
+				div(class='row m-0')
+					div(class="col-12 col-xl-6 d-none d-xl-block")
+						div(class='news')
+							include news/news-slider
+					div(class="col-12 col-xl-6")
+						.stories
+							- for(let i = 0; i<= 3; i++)
+								- let stories = storiesList[i]
+									include stories/stories-item
+
+// =======================
+		end header
+	======================

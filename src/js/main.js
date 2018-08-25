@@ -10,7 +10,7 @@ $(() => {
 		$('.preload').delay(1000).fadeOut('500');
 	});
 	//navbar toggler button function
-	navbarToggler.on('click',(event) => {
+	navbarToggler.on('click', function (event) {
 		event.preventDefault();
 		if(navbarToggler.attr('aria-expanded') === 'false')
 		{
@@ -26,7 +26,7 @@ $(() => {
 		}
 	});
 	//slider show function 
-	carouselIndicators.on('click', 'li',(event) => {
+	carouselIndicators.on('click', 'li', function (event) {
 		event.preventDefault();
 		$($(this).attr('data-target')).find('.carousel-item').eq($(this).attr('data-slide-to'))
 			.addClass('active').siblings().removeClass('active');
@@ -45,7 +45,7 @@ $(() => {
 	// });
 
 	//search form
-	search.on('click', 'label',(event) => {
+	search.on('click', 'label', function (event) {
 		event.preventDefault();
 		$('#'+$(this).attr('for')).toggleClass('active');
 	});

@@ -29,8 +29,8 @@ $(function () {
 	//slider show function 
 	carouselIndicators.on('click', 'li', function (event) {
 		event.preventDefault();
-		$($(undefined).attr('data-target')).find('.carousel-item').eq($(undefined).attr('data-slide-to')).addClass('active').siblings().removeClass('active');
-		$(undefined).addClass('active').siblings().removeClass('active');
+		$($(this).attr('data-target')).find('.carousel-item').eq($(this).attr('data-slide-to')).addClass('active').siblings().removeClass('active');
+		$(this).addClass('active').siblings().removeClass('active');
 	});
 	//loop animation auto run slider
 	// carouselIndicators.each(function (i,e) {
@@ -47,7 +47,7 @@ $(function () {
 	//search form
 	search.on('click', 'label', function (event) {
 		event.preventDefault();
-		$('#' + $(undefined).attr('for')).toggleClass('active');
+		$('#' + $(this).attr('for')).toggleClass('active');
 	});
 	//clients filter
 	btnFilter.on('click', function (event) {

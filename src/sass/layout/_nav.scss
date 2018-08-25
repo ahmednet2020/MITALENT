@@ -1,0 +1,95 @@
+/*======================
+====== start nav =======
+======================*/
+nav
+{
+	width:65%;
+    @include flex(0, 0, 65%);
+    height: 100%;
+    .navbar-toggler
+    {
+    	width:50px;
+    	margin-#{$right}: 1em;
+    	border: none;
+    	.toggler-icon,
+    	&:before,
+    	&:after
+    	{
+    		content: "";
+		    width: 100%;
+		    height: 2px;
+		    display: block;
+		    background-color: rgba($text-color,0.5);
+		    margin: 4px 0;
+	    	will-change: transform, opacity;
+            @include opacity(1);
+            @include transform(rotate(0) translate(0));
+            @include transition(transform 0.3s linear,opacity 0.3s ease);
+		}
+		&[aria-expanded='true']
+		{
+			.toggler-icon
+			{
+                @include opacity(0);
+			}
+			&:before
+			{
+                @include transform(rotate(405deg) translate(3px, 4px));
+			}
+			&:after
+			{
+                @include transform(rotate(-405deg) translate(5px, -6px));
+			}
+		}
+    }
+    .navbar-items
+    {
+        @include flex(1, 0, auto);
+    }
+    .nav-item
+    {
+    	padding: 0 1em;
+        letter-spacing: -2px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: rgba($text-color,0.5);
+        @include transition(color 0.2s ease);
+        @extend %fontheading;
+        &:hover,
+        &.active
+        {
+            color: $main-color;
+        }
+    }
+    .navbar-collapse
+    {
+        background-color: $white-color;
+    	position: absolute;
+	    top: 65px;
+	    #{$left}: auto;
+	    z-index: 999;
+    	will-change:transform;
+        @include box-shadow(0px 0px 10px 2px rgba($text-color, 0.3));
+        @include scale(0);
+        @include transition(transform 0.8s cubic-bezier(.5,1,1,1.5));
+    	&.show
+    	{
+            @include scale(1);
+    	}
+    	.nav-item
+    	{
+    		padding: 10px 1em;
+    	}
+    }
+}
+@include media($max_mid)
+{
+    nav
+    {
+        width:100%;
+        @include flex(0, 0, 100%);
+    }
+}
+/*======================
+====== end nav =======
+======================*/

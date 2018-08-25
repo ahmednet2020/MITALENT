@@ -1,0 +1,7 @@
+// start filter
+div(class="clients-filter")
+	ul(class="list-inline text-center")
+		each filter in clientsFilter
+			li(class=`list-inline-item h-style${filter === 'all'? ' active':''}`)
+				button(type="button" class="btn-filter" data-target=`${filter}`)= `${filter}`
+// end filter

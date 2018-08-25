@@ -1,0 +1,18 @@
+// =======================
+		start main
+	======================
+main
+	include clients/clients-grid
+	// start post slider
+	section(class="news pt-5 pb-5")
+		.container
+			.row
+				div(class='col-12 d-none d-lg-block col-lg-6')
+				div(class='col-12 col-lg-6')
+					include news/post-slider
+	// end post slider
+	-let storiesNumber = 5
+	include stories/stories
+// =======================
+		end main
+	======================

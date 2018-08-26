@@ -1,7 +1,7 @@
 'use strict';
-const CACHE_NAME = 'v7.5.1';
+const CACHE_NAME = 'v22.1.1';
 const urlsToCache = [
-  '/',
+  '/index.html',
   'https://fonts.googleapis.com/css?family=Amaranth:700|Raleway',
   './css/bootstrap.min.css',
   './css/font-awesome.min.css',

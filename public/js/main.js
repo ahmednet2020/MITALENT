@@ -7,9 +7,11 @@ $(function () {
 	var search = $('#search');
 	var btnFilter = $('.btn-filter');
 	var carouselControl = $('.carousel-control');
-	//preload function
+	//registerSw function
+	$.prototype.registerSw();
+	// preload function
 	$(window).load(function () {
-		$('.preload').delay(1000).fadeOut('500');
+		$('.preload').fadeOut('500');
 	});
 	//navbar toggler button function
 	navbarToggler.on('click', function (event) {
@@ -33,16 +35,17 @@ $(function () {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
 	//loop animation auto run slider
-	// carouselIndicators.each(function (i,e) {
-	// 	setInterval(function() {
-	// 		if($(e).find('li.active').next('li').length === 0)
-	// 		{
-	// 			$(e).find('li:first-child').click();
-	// 		} else {
-	// 			$(e).find('li.active').next('li').click();
-	// 		}
-	// 	}, 5000)
-	// });
+	carouselIndicators.each(function (i, e) {
+		setInterval(function () {
+			requestAnimationFrame(function () {
+				if ($(e).find('li.active').next('li').length === 0) {
+					$(e).find('li:first-child').click();
+				} else {
+					$(e).find('li.active').next('li').click();
+				}
+			});
+		}, 5000);
+	});
 
 	//search form
 	search.on('click', 'label', function (event) {
@@ -66,27 +69,76 @@ $(function () {
 		event.preventDefault();
 		$($(this).attr('href')).find('.carousel-item.active')[$(this).attr('data-slide')](".carousel-item").addClass('active').siblings().removeClass('active');
 	});
+});
+// end juqery code
 
-	//start sw
+
+// =================================
+// ========start serviceWorker =====
+// =================================
+
+//start register Worker
+$.prototype.registerSw = function () {
+	// check if browser support serviceWorker
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function (e) {
 			navigator.serviceWorker.register('../sw.js').then(function (reg) {
 				// Registration was successful
 				console.log('ServiceWorker registration successful with scope: ', reg.scope);
-				//
+				// chack if you have old version of serviceWorker
 				if (!navigator.serviceWorker.controller) {
 					return;
 				}
 				if (reg.waiting) {
 					reg.waiting.postMessage({ action: 'skipWaiting' });
-					window.location.reload();
 				}
 			}).catch(function (err) {
 				// registration failed :(
 				console.log('ServiceWorker registration failed: ', err);
 			});
 		});
+		navigator.serviceWorker.addEventListener('controllerchange', function () {
+			$.prototype.alertSw();
+		});
 	}
 	//end sw
-});
-// end juqery code
+};
+
+$.prototype.alertSw = function () {
+	var alertSw = '<div id="alertSw">New Version Available<button id="refresh" data-val="ref">Refresh</button><button id="dismiss" data-val="dis">Dismiss</button></div>';
+	var alertSwStyle = '<style id=\'alertSwStyle\'>\n\t\t#alertSw {\n\t\t\tdisplay:none;\n\t\t\tbackground-color: #c3dbdb;\n    \t\tcolor: #fff;\n    \t\tposition: fixed;\n\t\t    bottom: 0;\n\t\t    right: 0;\n\t\t    left: 0;\n\t\t    width: 100%;\n\t\t    text-align: center;\n\t\t    padding: 15px;\n\t\t    font-size: 18px;\n    \t\tfont-weight: bold;\n    \t\ttext-transform: capitalize;\n    \t\tz-index: 9999;\n\t\t}\n\t\t#alertSw button {\n\t\t\tdisplay: inline-block;\n\t\t    padding: 10px;\n    \t\tfont-weight: bold;\n\t\t}\n\t\t</style>\n\t';
+	// add element to dom 
+	$('body').append(alertSw);
+	$('head').append(alertSwStyle);
+	var alertSwDom = $('#alertSw');
+	var alertSwStyleDom = $('#alertSwStyle');
+	alertSwDom.fadeIn('5000');
+	alertSwDom.on('click', 'button', function (event) {
+		event.preventDefault();
+		var val = $(this).data('val');
+		$.prototype.refPage(val).then(function (data) {
+			if (data === 'ref') {
+				window.location.reload();
+			} else {
+				alertSwDom.slideUp('5000', function () {
+					$(this).remove();
+					alertSwStyleDom.remove();
+				});
+			}
+		}).catch(function (err) {
+			console.log(err);
+		});
+	});
+};
+$.prototype.refPage = function (val) {
+	return new Promise(function (resolve, reject) {
+		if (val) {
+			return resolve(val);
+		} else {
+			return reject('error');
+		}
+	});
+};
+// =================================
+// ========end serviceWorker =====
+// =================================

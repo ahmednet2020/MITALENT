@@ -1,7 +1,7 @@
 'use strict';
 
-var CACHE_NAME = 'v7.5.1';
-var urlsToCache = ['/', 'https://fonts.googleapis.com/css?family=Amaranth:700|Raleway', './css/bootstrap.min.css', './css/font-awesome.min.css', './css/index.css', './js/jquery.min.js', './js/main.js'];
+var CACHE_NAME = 'v22.1.1';
+var urlsToCache = ['/index.html', 'https://fonts.googleapis.com/css?family=Amaranth:700|Raleway', './css/bootstrap.min.css', './css/font-awesome.min.css', './css/index.css', './js/jquery.min.js', './js/main.js'];
 //install event
 self.addEventListener('install', function (e) {
   console.log("service-workers install");

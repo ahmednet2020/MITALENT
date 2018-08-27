@@ -1,0 +1,37 @@
+/*======================
+====== start clients row style=======
+======================*/
+.clients-item
+{
+	&.view-row
+	{
+		img
+		{
+			height: 70%;	
+		}
+		.client-link
+		{
+			position: static;
+			background-color: transparent;
+			padding:0.5em;
+			@include opacity(1);
+		}
+		.client-arrow
+		{
+			display: none;
+		}
+		.client-title
+		{
+			position: static;
+    		color: $text-color;
+    		padding:0;
+		}
+		.client
+		{
+			padding:0.5em;
+		}
+	}
+}
+/*======================
+====== end clients row style=======
+======================*/

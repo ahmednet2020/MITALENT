@@ -1,7 +1,9 @@
 // ========== start nav========
-nav(class="navbar align-items-start")
+nav(class=`navbar align-items-start${navActive === 'home'? '':' bg-main'}`)
 	.container
 		include navbar
 		include items
+		div(class='search d-inline-block d-lg-none')
+			include ../form/search
 		include brand
 // ========== end nav========

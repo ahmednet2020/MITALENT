@@ -2,13 +2,21 @@
 section(class="clients pt-5 pb-5")
 	.container
 		div(class='row m-0')
-			div(class='col-12 col-lg-6')
+			div(class='col-12 col-lg-8')
 				include clients-filter
-			div(class='col-12 col-lg-6')
+			div(class='col-12 col-lg-4')
 				div(class="button-grid text-center text-lg-right")
-					button(type='button', aria-label='row' class="btn btn-grid active")
+					button(type='button',
+							aria-label='row',
+							class="btn btn-grid active",
+							data-target='.clients-item',
+							data-toggle='view-row')
 						<i class="fa fa-th" aria-hidden="true"></i>
-					button(type='button', aria-label='col' class="btn btn-grid")
+					button(type='button',
+							aria-label='col',
+							class="btn btn-grid",
+							data-target='.clients-item',
+							data-toggle='view-row')
 						<i class="fa fa-bars" aria-hidden="true"></i>
 		// start clients grid 
 		div(class="clients-item mt-5")

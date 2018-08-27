@@ -1,37 +1,91 @@
 /*======================
 ====== start forms style =======
 ======================*/
-#search
+.search
 {
-	position: relative;
-	input
+	.search-form
 	{
-		text-indent: 10px;
-	    padding: 0.5em;
-	    width: 100%;
-	    display: inline-block;
-	    position: relative;
-	    z-index: 9;
-	    will-change:transform;
-	    @include border-radius(50px);
-	    @include scale((0,1));
-	    @include transform-origin(#{$right});
-    	@include transition(transform 0.3s ease-in-out);
-	    &.active
-	    {
-	    	@include scale(1);
-	    }
+		position: relative;
+		input
+		{
+			text-indent: 10px;
+		    padding: 0.5em;
+		    width: 100%;
+		    display: inline-block;
+		    position: relative;
+		    z-index: 9;
+		    will-change:transform;
+		    @include border-radius(50px);
+		    @include scale((0,1));
+		    @include transform-origin(#{$right});
+	    	@include transition(transform 0.3s ease-in-out);
+		}
+		label
+		{
+			display: inline-block;
+		    margin-bottom: .5rem;
+		    font-size: 1.5rem;
+		    position: absolute;
+		    top: 0;
+		    #{$right}: 5%;
+		    z-index: 99;
+	    	cursor: pointer;
+		}
 	}
-	label
+	&.active
+    {
+    	.search-form
+    	{
+			input
+	    	{
+	    		@include scale(1);
+	    	}
+    	}
+    }
+}
+@include media($max_lg)
+{
+	.search
 	{
-		display: inline-block;
-	    margin-bottom: .5rem;
-	    font-size: 1.5rem;
-	    position: absolute;
-	    top: 0;
-	    #{$right}: 5%;
-	    z-index: 99;
-    	cursor: pointer;
+		transition: all 0.5s ease-in-out;
+		.search-form
+		{
+			input
+			{
+				display: none;
+			}
+			label
+			{
+				position: static;
+			}
+		}
+		&.active
+		{
+			position: fixed;
+		    top: 0;
+		    text-align: center;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    background-color: $white-color;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 9999;
+		    padding: 1em;
+		   	.search-form
+		    {
+			    input
+			    {
+			    	display:block;
+				    border: 1px solid rgba($text-color,0.5);
+				}
+				label
+				{
+					position: absolute;
+					right: 2em;
+				}
+			}
+		}
 	}
 }
 /*======================

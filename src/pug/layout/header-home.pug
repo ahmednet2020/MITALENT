@@ -8,7 +8,7 @@ header
 	div(class="top-bar d-flex align-items-start")
 		include nav/nav-home
 		// ========== start search========
-		div(class="search d-flex")
+		div(class=`search d-none d-lg-flex${navActive === 'home'? ' bg-main':''}`)
 			div(class="container")
 				include form/search
 		// ========== end search========

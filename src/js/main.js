@@ -2,9 +2,10 @@
 $(function (){
 	let navbarToggler = $('.navbar-toggler');
 	let carouselIndicators = $('.carousel-indicators');
-	let search = $('#search');
+	let search = $('.search');
 	let btnFilter = $('.btn-filter');
 	let carouselControl = $('.carousel-control');
+	let buttonGrid  = $('.button-grid');
 	//registerSw function
 	$.prototype.registerSw();
 	// preload function
@@ -51,7 +52,7 @@ $(function (){
 	//search form
 	search.on('click', 'label', function (event) {
 		event.preventDefault();
-		$('#'+$(this).attr('for')).toggleClass('active');
+		$(this).parents('.search').toggleClass('active');
 	});
 	//clients filter
 	btnFilter.on('click', function(event) {
@@ -71,6 +72,13 @@ $(function (){
 		event.preventDefault();
 		$($(this).attr('href')).find('.carousel-item.active')[$(this).attr('data-slide')](".carousel-item")
 			.addClass('active').siblings().removeClass('active');
+	});
+	// clients row style
+	buttonGrid.on('click', 'button', function(event) {
+		event.preventDefault();
+		if($(this).hasClass('active')) return;
+		$(this).addClass('active').siblings().removeClass('active');
+		$($(this).data('target')).toggleClass($(this).data('toggle'));
 	});
 });
 // end juqery code
